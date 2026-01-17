@@ -1,6 +1,7 @@
 ---
 layout: page
 title: CV
+pdf_link: /assets/cv.pdf
 ---
 
 {% for section in site.data.cv.sections %}

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Publications
+pdf_link: /assets/publications.pdf
 ---
 
 {% if site.data.publications.intro_md %}
