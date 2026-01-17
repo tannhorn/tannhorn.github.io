@@ -22,6 +22,28 @@ bundle exec jekyll serve --baseurl=""
 bundle exec jekyll build
 ```
 
+## CV and publications
+
+- Edit CV data in `_data/cv.yml`.
+- Edit publications data in `_data/publications.yml`.
+- The pages `cv.md` and `publications.md` render directly from those YAML files (Markdown fields use `*_md` keys).
+
+## Regenerating TeX/PDFs locally
+
+Render TeX from YAML:
+
+```bash
+python3 scripts/render_tex.py
+```
+
+Build PDFs (requires `latexmk`):
+
+```bash
+scripts/build_pdf.sh
+```
+
+GitHub Pages will not run TeX during the build, so commit generated PDFs (e.g. `assets/cv.pdf`, `assets/publications.pdf`) or set up a GitHub Actions workflow later.
+
 ## GitHub Pages constraints
 
 GitHub Pages builds with a restricted set of supported plugins. This site uses the `github-pages` gem (which includes `jekyll-feed`) to stay compatible. Avoid adding unsupported plugins or custom build steps to the default Pages build.
@@ -31,12 +53,5 @@ If you update dependencies, keep `github-pages` aligned with the GitHub Pages bu
 ## Blog feed
 
 The RSS/Atom feed is provided by `jekyll-feed` and available at `/feed.xml` once the site is built.
-
-## Future: TeX to PDF workflow
-
-GitHub Pages cannot run TeX during its build. Two viable options:
-
-- Option A: build PDFs locally and commit the generated files to the repository.
-- Option B (recommended): use a GitHub Actions workflow to compile TeX and deploy Pages artifacts.
 
 Replace placeholder content in `index.md`, `_config.yml`, and the `_data/` files.

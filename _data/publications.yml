@@ -1,13 +1,224 @@
-- title: "Sample Publication Title"
-  authors: "Your Name, Coauthor A, Coauthor B"
-  venue: "Journal/Conference Name"
-  year: "2024"
-  link: "#"
-  note: "Replace with DOI or project page link."
+intro_md: "For non-first-author publications, the <a href=\"https://www.elsevier.com/researcher/author/policies-and-guidelines/credit-author-statement\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"CRediT author statement (opens in new tab)\">CRediT author statement</a> is used to indicate my contribution. Unpublished work is available upon request. The three most important publications are highlighted."
 
-- title: "Another Publication Title"
-  authors: "Your Name, Coauthor C"
-  venue: "Workshop Name"
-  year: "2022"
-  link: "#"
-  note: "Optional note about awards or relevance."
+sections:
+  - title: "Publications in peer-reviewed scientific journals"
+    type: "journal"
+    entries:
+      - authors_md: "**Bureš, L.**"
+        year: 2025
+        title: "Comparison of analytical models for frequency response and linear stability of molten salt reactors"
+        venue: "Nuclear Science and Engineering"
+        volume: ""
+        pages: "1--24"
+        doi: "10.1080/00295639.2025.2460318"
+        highlight: false
+      - authors_md: "**Bureš, L.**, Bucci, M., Sato, Y., & Bucci, M."
+        year: 2024
+        title: "A coarse grid approach for single bubble boiling simulations with the volume of fluid method"
+        venue: "Computers & Fluids"
+        volume: "271"
+        pages: "106182"
+        doi: "10.1016/j.compfluid.2024.106182"
+        highlight: false
+      - authors_md: "Fischer, L., & **Bureš, L.**"
+        year: 2024
+        title: "Application of Modelica/TRANSFORM to system modeling of the molten salt reactor experiment"
+        venue: "Nuclear Engineering and Design"
+        volume: "416"
+        pages: "112768"
+        doi: "10.1016/j.nucengdes.2023.112768"
+        highlight: false
+        credit_md: "**CRediT author statement:** Conceptualization, Methodology, Software, Validation, Supervision, Writing – Review & Editing."
+      - authors_md: "**Bureš, L.**, & Sato, Y."
+        year: 2022
+        title: "Comprehensive simulations of boiling with a resolved microlayer: Validation and sensitivity study"
+        venue: "Journal of Fluid Mechanics"
+        volume: "933"
+        pages: "A54"
+        doi: "10.1017/jfm.2021.1108"
+        highlight: true
+      - authors_md: "Wong, K. W., **Bureš, L.**, & Mikityuk, K."
+        year: 2021
+        title: "Interface tracking investigation of the sliding bubbles effects on heat transfer in the laminar regime"
+        venue: "Nuclear Technology"
+        volume: "208(8)"
+        pages: "1266--1278"
+        doi: "10.1080/00295450.2021.1971025"
+        highlight: false
+        credit_md: "**CRediT author statement:** Conceptualization, Methodology, Supervision."
+      - authors_md: "**Bureš, L.**, & Sato, Y."
+        year: 2021
+        title: "On the modelling of the transition between contact-line and microlayer evaporation regimes in nucleate boiling"
+        venue: "Journal of Fluid Mechanics"
+        volume: "916"
+        pages: "A53"
+        doi: "10.1017/jfm.2021.204"
+        highlight: true
+      - authors_md: "**Bureš, L.**, & Sato, Y."
+        year: 2021
+        title: "Direct numerical simulation of evaporation and condensation with the geometric VOF method and a sharp-interface phase-change model"
+        venue: "International Journal of Heat and Mass Transfer"
+        volume: "173"
+        pages: "121233"
+        doi: "10.1016/j.ijheatmasstransfer.2021.121233"
+        highlight: true
+      - authors_md: "**Bureš, L.**, Sato, Y., & Pautz, A."
+        year: 2021
+        title: "Piecewise linear interface-capturing volume-of-fluid method in axisymmetric cylindrical coordinates"
+        venue: "Journal of Computational Physics"
+        volume: "436"
+        pages: "110291"
+        doi: "10.1016/j.jcp.2021.110291"
+        highlight: false
+      - authors_md: "**Bureš, L.**, & Sato, Y."
+        year: 2020
+        title: "Direct numerical simulation of phase change in the presence of non-condensable gases"
+        venue: "International Journal of Heat and Mass Transfer"
+        volume: "121"
+        pages: "119400"
+        doi: "10.1016/j.ijheatmasstransfer.2020.119400"
+        highlight: false
+      - authors_md: "**Bureš, L.**, & Caruso, S."
+        year: 2018
+        title: "Acropolis: Novel approach to single-pin depletion calculations using stochastic optimisation"
+        venue: "Nuclear Science and Engineering"
+        volume: "191(1)"
+        pages: "66--84"
+        doi: "10.1080/00295639.2018.1442059"
+        highlight: false
+
+  - title: "Peer-reviewed books/monographs"
+    type: "book"
+    entries:
+      - authors_md: "**Bureš, L.**"
+        year: 2021
+        title: "Fundamental study on microlayer dynamics in nucleate boiling"
+        publication_type: "Doctoral dissertation"
+        publisher: "École Polytechnique Fédérale de Lausanne, Lausanne, Switzerland"
+        doi: "10.5075/epfl-thesis-9856"
+
+  - title: "Peer-reviewed conference proceedings"
+    type: "proceedings"
+    entries:
+      - authors_md: "**Bureš, L.**, & Nilsson, P."
+        year: 2025
+        title: "Impacts of internal heating on flow and temperature distribution in channels"
+        venue: "Proceedings of 21st International Topical Meeting on Nuclear Reactor Thermal Hydraulics (NURETH-21)"
+        note_md: "Preprint available at [arXiv:2507.08515](https://arxiv.org/abs/2507.08515)."
+        doi: ""
+        highlight: false
+      - authors_md: "**Bureš, L.**"
+        year: 2025
+        title: "Role of recirculation in reactivity loss in circulating-fuel reactors"
+        venue: "Proceedings of M&C 2025 — The International Conference on Mathematics and Computational Methods Applied to Nuclear Science and Engineering"
+        doi: "10.13182/MC25-47000"
+        highlight: false
+      - authors_md: "Ruscoe, T. A., Alatrash, Y., Fischer, L., **Bureš, L.**, & Elter, Zs."
+        year: 2024
+        title: "On flow distribution and heat transfer in a graphite moderated molten salt reactor"
+        venue: "Proceedings of 14th International Topical Meeting on Nuclear Reactor Thermal-Hydraulics, Operation, and Safety (NUTHOS-14)"
+        doi: "10.5281/zenodo.13972522"
+        highlight: false
+        credit_md: "**CRediT author statement:** Methodology, Software, Writing – Review & Editing."
+      - authors_md: "**Bureš, L.**"
+        year: 2024
+        title: "Effect of temperature recirculation on frequency response and stability of molten salt reactors"
+        venue: "Proceedings of PHYSOR 2024 — The International Conference on Physics of Reactors"
+        doi: "10.13182/PHYSOR24-43458"
+        highlight: false
+      - authors_md: "Ponce Tovar, M., Fischer, L., & **Bureš, L.**"
+        year: 2024
+        title: "On the impact of fuel velocity profile on the loss of delayed neutron precursors in the molten salt reactor experiment"
+        venue: "Proceedings of PHYSOR 2024 — The International Conference on Physics of Reactors"
+        doi: "10.13182/PHYSOR24-43471"
+        highlight: false
+        credit_md: "**CRediT author statement:** Conceptualization, Methodology, Writing – Review & Editing."
+      - authors_md: "**Bureš, L.**, Ponce Tovar, M., & Groth Jensen, J."
+        year: 2023
+        title: "Distributed-parameter linear stability analysis of a double-pass circulating-fuel reactor"
+        venue: "Proceedings of M&C 2023 — The International Conference on Mathematics and Computational Methods Applied to Nuclear Science and Engineering"
+        doi: "10.5281/zenodo.11196185"
+        highlight: false
+      - authors_md: "Ponce Tovar, M., Vidal-Ferrandiz, A., **Bureš, L.**, Ginestar, D., & Groth Jensen, J."
+        year: 2023
+        title: "Investigation of neutron transport approximations and homogenization methods for a small molten salt reactor"
+        venue: "Proceedings of M&C 2023 — The International Conference on Mathematics and Computational Methods Applied to Nuclear Science and Engineering"
+        doi: "10.5281/zenodo.12730861"
+        highlight: false
+        credit_md: "**CRediT author statement:** Conceptualization, Methodology, Writing – Review & Editing."
+      - authors_md: "**Bureš, L.**, & Sato, Y."
+        year: 2022
+        title: "Computational study of force balance during nucleate boiling"
+        venue: "Proceedings of the 7th Thermal and Fluids Engineering Conference (TFEC 2022)"
+        note_md: "Selected as a best paper."
+        doi: "10.1615/TFEC2022.mph.040736"
+        highlight: false
+      - authors_md: "**Bureš, L.**, & Sato, Y."
+        year: 2021
+        title: "Analysis of dynamics of microlayer formation and destruction in nucleate boiling"
+        venue: "Proceedings of the 5–6th Thermal and Fluids Engineering Conference (TFEC 2021)"
+        doi: "10.1615/TFEC2021.boi.036174"
+        highlight: false
+      - authors_md: "**Bureš, L.**, & Sato, Y."
+        year: 2021
+        title: "Marker gradient method: Sharp and robust algorithm for interfacial area density calculation"
+        venue: "Proceedings of the 5–6th Thermal and Fluids Engineering Conference (TFEC 2021)"
+        doi: "10.1615/TFEC2021.cmd.036173"
+        highlight: false
+      - authors_md: "**Bureš, L.**, & Sato, Y."
+        year: 2020
+        title: "Sharp-interface phase-change model with the VOF method"
+        venue: "Proceedings of the 5th Thermal and Fluids Engineering Conference (TFEC 2020)"
+        doi: "10.1615/TFEC2020.cmd.031939"
+        highlight: false
+      - authors_md: "Wong, K. W., **Bureš, L.**, Nichenko, S., & Krepel, J."
+        year: 2019
+        title: "Direct numerical simulation of molten salt bubble growth with PSI-BOIL"
+        venue: "Proceedings of the International Congress on Advances in Nuclear Power Plants (ICAPP 2019)"
+        doi: "10.5281/zenodo.3357902"
+        highlight: false
+        credit_md: "**CRediT author statement:** Conceptualization, Methodology, Writing – Review & Editing, Supervision."
+
+  - title: "Patents and licences"
+    type: "patent"
+    entries:
+      - authors_md: "**Bureš, L.**, Rodriguez Ruocco, I., & Schofield, A. V."
+        year: 2025
+        title: "A method of operating a molten salt reactor"
+        patent: "International Patent Application WO 2025/190786 A1"
+        venue: "Geneva, Switzerland: World Intellectual Property Organization"
+        url: "https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2025190786"
+
+  - title: "Contributions to conferences"
+    type: "contribution"
+    entries:
+      - authors_md: "**Bureš, L.**"
+        year: 2025
+        title: "Challenges in modelling and simulation of thermal molten salt reactor transients: Industrial perspective"
+        description_md: "Invited panel speaker for the *Topical session on Challenges in Modelling and Simulation of Reactor Transients* at the *2025 OECD/NEA WPRS Benchmarks Workshops*, Cambridge, United Kingdom."
+      - authors_md: "**Bureš, L.**"
+        year: 2024
+        title: "Seaborg Technologies: Computational R&D perspective"
+        description_md: "Invited panel speaker for the *Advancing Molten Salt Technology for the Next Generation of Nuclear Reactors* panel at the *2024 ANS Winter Conference and Expo*, Orlando, FL, United States."
+      - authors_md: "**Bureš, L.**"
+        year: 2024
+        title: "Compact Molten Salt Reactor (CMSR) Power Barge: Progress & status"
+        description_md: "Invited speaker for the *Regional Workshop on Reactor Physics, System Thermal Hydraulics and Safety of Small Modular Reactors for Near-term Deployment*, Bandung, Indonesia (delivered online)."
+      - authors_md: "Bureš, J., **Bureš, L.**, Bucci, M., & Bucci, M."
+        year: 2022
+        title: "Machine-learning prediction of microscopic bubble-growth characteristics"
+        description_md: "Presented at *ECCOMAS Congress 2022 — The 8th European Congress on Computational Methods in Applied Sciences and Engineering*, Oslo, Norway."
+        credit_md: "**CRediT author statement:** Conceptualization, Methodology, Supervision."
+      - authors_md: "Yama, K., **Bureš, L.**, Sato, Y., & Yabuki, T."
+        year: 2021
+        title: "Microscale heat transport measurement of three-phase boundary line using stacked MEMS heat flux sensor (in Japanese)"
+        description_md: "Presented at *The 12th Symposium on Micro-Nano Science and Technology* (online)."
+        credit_md: "**CRediT author statement:** Conceptualization, Methodology."
+      - authors_md: "**Bureš, L.**, & Sato, Y."
+        year: 2019
+        title: "New contact line region model for multi-scale analysis of nucleate boiling"
+        description_md: "Poster presentation at *SWEP2 — Surface Wettability Effects on Phase Change Phenomena workshop*, Mons, Belgium."
+      - authors_md: "**Bureš, L.**"
+        year: 2016
+        title: "Application of calculation codes based on Monte Carlo method for benchmark experiments (in Czech)"
+        description_md: "Poster presentation of bachelor's thesis at *16. Mikulášské setkání Mladé generace ČNS*, Brno, Czech Republic. Selected as best bachelor's thesis."

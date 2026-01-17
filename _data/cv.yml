@@ -1,16 +1,130 @@
-- role: "Title of Role"
-  org: "Organization Name"
-  location: "City, Country"
-  start: "2022"
-  end: "Present"
-  highlights:
-    - "Replace with an accomplishment or responsibility."
-    - "Add another bullet if needed."
+basics:
+  name: "Lubomír Bureš"
+  # TODO: Add or edit a short tagline for the CV header.
+  tagline: "A nuclear engineer with deep experience in computational modelling and technical problem solving."
 
-- role: "Previous Role"
-  org: "Previous Organization"
-  location: "City, Country"
-  start: "2019"
-  end: "2022"
-  highlights:
-    - "Placeholder achievement or responsibility."
+sections:
+  - title: "Professional Experience"
+    kind: "experience"
+    entries:
+      - org: "Saltfoss Energy (formerly Seaborg Technologies)"
+        location: "Copenhagen, Denmark"
+        roles:
+          - title: "Senior Multiphysics Specialist"
+            dates: "March 2024 to present"
+            highlights_md:
+              - "Collaborate as a technical lead on the Saltfoss molten-salt reactor design, guiding key architectural decisions and ensuring effective system integration."
+              - "Address complex technical challenges in reactor physics, thermal hydraulics, and design optimisation."
+              - "Develop, verify, and validate computational models for advanced nuclear applications."
+              - "Publish research and present at scientific conferences to bolster the company's technical visibility."
+          - title: "Multiphysics Specialist"
+            dates: "October 2021 to March 2024"
+            highlights_md:
+              - "Developed multiple computational models for molten-salt reactor analysis."
+              - "Supervised a master thesis project with the candidate then joining the company as a full-time employee."
+              - "Published peer-reviewed research and represented the company both in Denmark and internationally."
+      - org: "Paul Scherrer Institute"
+        location: "Villigen, Switzerland"
+        roles:
+          - title: "Doctoral Researcher"
+            dates: "October 2018 to September 2021"
+            highlights_md:
+              - "Conducted independent doctoral research in computational physics."
+              - "Designed and programmed software for high-fidelity numerical simulations applied to scientific research."
+              - "Supervised four student projects, resulting in published research and successful student outcomes."
+              - "Led exercise sessions for a course at ETH Zurich, improving student understanding."
+
+  - title: "Supplementary Projects"
+    kind: "experience"
+    entries:
+      - org: "Winterlead"
+        location: "Remote"
+        roles:
+          - title: "Freelance Consultant"
+            dates: "April 2024 to present"
+            highlights_md:
+              - "Provide software development, computational engineering, and consultancy services on ad hoc basis."
+              - "Developed software solutions for Quantified Carbon."
+              - "Volunteered technical expertise to the Repower Initiative."
+
+  - title: "Education"
+    kind: "education"
+    entries:
+      - institution: "EPFL, Institute of Physics"
+        dates: "2018 to 2021"
+        degree: "Doctor of Science (PhD)"
+        location: "Paul Scherrer Institute (PSI), Villigen, Switzerland"
+        details_md:
+          - "*Degree awarded by*: École Polytechnique Fédérale de Lausanne (EPFL)"
+          - "*Thesis*: Fundamental study on microlayer dynamics in nucleate boiling"
+          - "*Achievements*: Passed without reserve (highest grade). Awarded the 2022 PhD Prize by the European Nuclear Education Network Association. Awarded the 2019 Fellowship for Research in Japan (cancelled due to Covid-19) by the Japanese Society for the Promotion of Science."
+      - institution: "ETH Zurich – EPF Lausanne"
+        dates: "2016 to 2018"
+        degree: "Joint MSc in Nuclear Engineering"
+        location: "Zürich & Lausanne, Switzerland"
+        details_md:
+          - "*Thesis*: Direct numerical simulation of phase change in the presence of non-condensable gases"
+          - "*Achievements*: Graduated with distinction, overall GPA: 3.973/4.000 (third best among 1043 Master graduates). Awarded the EPFL Excellence Fellowship over the duration of the study programme."
+          - "*Certifications*: Received the European Master of Science in Nuclear Engineering certification."
+          - "*Internships*: National Cooperative for the Disposal of Radioactive Waste (Wettingen, Switzerland)."
+          - "*Extracurricular*: Represented the class in the EPFL student organisation (Fall semester 2016)."
+      - institution: "Czech Technical University"
+        dates: "2013 to 2016"
+        degree: "BSc in Nuclear Engineering"
+        location: "Prague, Czech Republic"
+        details_md:
+          - "*Thesis*: Application of calculation codes based on Monte-Carlo method for benchmark experiments"
+          - "*Achievements*: Graduated with honours, overall GPA: 3.935/4.000. Won a student thesis competition. Received the 2015 Talented Student Award from the Czech Technical University."
+          - "*Internships*: Nuclear Physics Institute of the Czech Academy of Sciences (Řež, Czech Republic), Joint Institute for Nuclear Research (Dubna, Russia)."
+
+  - title: "Skills"
+    kind: "skills"
+    categories:
+      - name: "Languages"
+        items_md:
+          - "Czech: Native speaker."
+          - "English: Full professional proficiency (C2), certificate: Cambridge English: Advanced (CAE), grade A."
+          - "German: Professional working proficiency (C1)."
+          - "Danish: Professional working proficiency (B2), certificate: Prøve i Dansk 3, grade 8.5/12."
+      - name: "Programming Languages"
+        items_list:
+          - "Python"
+          - "C++"
+          - "Modelica"
+          - "MATLAB"
+      - name: "Software Tools"
+        items_list:
+          - "Git"
+          - "Jupyter"
+          - "VS Code"
+          - "Vim"
+          - "MS Office"
+          - "LaTeX"
+      - name: "Operating Systems"
+        items_list:
+          - "Windows"
+          - "Linux"
+
+  - title: "Organisational Involvement"
+    kind: "experience"
+    entries:
+      - org: "IDA Nuclear"
+        location: "Danish Society of Engineers, Denmark"
+        roles:
+          - title: "Board Member"
+            dates: "September 2025 to present"
+            highlights_md:
+              - "Organise events promoting knowledge and education about nuclear and atomic technology."
+      - org: "PhD and Postdoc Association"
+        location: "Paul Scherrer Institute, Switzerland"
+        roles:
+          - title: "President"
+            dates: "October 2019 to May 2021"
+            highlights_md:
+              - "Oversaw the creation of the association's bylaws, enabling its registration as a non-profit organisation."
+              - "Led the association through the challenging times of the Covid-19 pandemic, ensuring continued support and engagement for members."
+              - "Represented the association externally and within the institute, enhancing its visibility and influence."
+          - title: "Social Committee Head"
+            dates: "March 2019 to September 2019"
+            highlights_md:
+              - "Organised social events and activities, fostering a sense of community among members."

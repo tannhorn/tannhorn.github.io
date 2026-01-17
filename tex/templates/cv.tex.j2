@@ -1,0 +1,74 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{parskip}
+
+\titleformat{\section}{\large\bfseries}{}{0pt}{}
+\setlist[itemize]{leftmargin=1.5em, noitemsep, topsep=0pt}
+\urlstyle{same}
+
+\begin{document}
+
+\begin{center}
+{\LARGE {{ cv.basics.name | latex_escape }}}\\
+{% if cv.basics.tagline %}{\small {{ cv.basics.tagline | latex_escape }}}\\{% endif %}
+\small {{ contact_line }}
+\end{center}
+
+{% for section in cv.sections %}
+\section*{ {{ section.title | latex_escape }} }
+
+{% if section.kind == "skills" %}
+{% for category in section.categories %}
+\textbf{ {{ category.name | latex_escape }} }\\
+{% if category.items_list %}
+{{ category.items_list | join(", ") | latex_escape }}
+\\
+{% endif %}
+{% if category.items_md %}
+\begin{itemize}
+{% for item in category.items_md %}
+\item {{ item | md_to_latex }}
+{% endfor %}
+\end{itemize}
+{% endif %}
+\vspace{0.25em}
+{% endfor %}
+
+{% elif section.kind == "education" %}
+{% for entry in section.entries %}
+\textbf{ {{ entry.degree | latex_escape }} }\\
+{{ entry.institution | latex_escape }}\hfill {{ entry.location | latex_escape }}\\
+{{ entry.dates | date_range_to_latex | latex_escape }}
+{% if entry.details_md %}
+\begin{itemize}
+{% for item in entry.details_md %}
+\item {{ item | md_to_latex }}
+{% endfor %}
+\end{itemize}
+{% endif %}
+\vspace{0.5em}
+{% endfor %}
+
+{% else %}
+{% for entry in section.entries %}
+\textbf{ {{ entry.org | latex_escape }} }\hfill {{ entry.location | latex_escape }}\\
+{% for role in entry.roles %}
+\textit{ {{ role.title | latex_escape }} }\hfill {{ role.dates | date_range_to_latex | latex_escape }}\\
+{% if role.highlights_md %}
+\begin{itemize}
+{% for item in role.highlights_md %}
+\item {{ item | md_to_latex }}
+{% endfor %}
+\end{itemize}
+{% endif %}
+{% endfor %}
+\vspace{0.5em}
+{% endfor %}
+{% endif %}
+{% endfor %}
+
+\end{document}

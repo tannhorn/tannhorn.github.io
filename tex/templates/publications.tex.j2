@@ -1,0 +1,56 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage[table]{xcolor}
+\usepackage{parskip}
+\usepackage{titlesec}
+
+\titleformat{\section}{\large\bfseries}{}{0pt}{}
+\setlist[itemize]{leftmargin=1.5em, noitemsep, topsep=0pt}
+\urlstyle{same}
+
+{% raw %}\newcommand{\highlight}[1]{\begingroup
+  \setlength{\fboxsep}{1pt}\colorbox{yellow!30}{\parbox[t]{\dimexpr\linewidth-2\fboxsep\relax}{#1}}\endgroup
+}{% endraw %}
+
+\begin{document}
+
+\section*{Research Output}
+{% if publications.intro_md %}
+{{ publications.intro_md | md_to_latex }}
+{% endif %}
+
+{% for section in publications.sections %}
+\section*{ {{ section.title | latex_escape }} }
+\begin{itemize}
+{% for entry in section.entries %}
+\item
+{% set item_text %}
+{% if section.type == "journal" %}
+{{ entry.authors_md | md_to_latex }} ({{ entry.year }}). {{ entry.title | latex_escape }}. \textit{ {{ entry.venue | latex_escape }} }{% if entry.volume %}, {{ entry.volume | latex_escape }}{% endif %}{% if entry.pages %}, {{ entry.pages | latex_escape }}{% endif %}.
+{% elif section.type == "book" %}
+{{ entry.authors_md | md_to_latex }} ({{ entry.year }}). \textit{ {{ entry.title | latex_escape }} } ({{ entry.publication_type | latex_escape }}). {{ entry.publisher | latex_escape }}.
+{% elif section.type == "proceedings" %}
+{{ entry.authors_md | md_to_latex }} ({{ entry.year }}). {{ entry.title | latex_escape }}. In \textit{ {{ entry.venue | latex_escape }} }.
+{% elif section.type == "patent" %}
+{{ entry.authors_md | md_to_latex }} ({{ entry.year }}). \textit{ {{ entry.title | latex_escape }} } ({{ entry.patent | latex_escape }}). {{ entry.venue | latex_escape }}.
+{% elif section.type == "contribution" %}
+{{ entry.authors_md | md_to_latex }} ({{ entry.year }}). {{ entry.title | latex_escape }}.
+{% else %}
+{{ entry.authors_md | md_to_latex }} ({{ entry.year }}). {{ entry.title | latex_escape }}.
+{% endif %}
+{% endset %}
+{% if entry.highlight %}\highlight{ {{ item_text | trim }} }{% else %}{{ item_text | trim }}{% endif %}
+{% if entry.note_md %}\\{\small {{ entry.note_md | md_to_latex }}}{% endif %}
+{% if entry.description_md %}\\{\small {{ entry.description_md | md_to_latex }}}{% endif %}
+{% if entry.credit_md %}\\{\small {{ entry.credit_md | md_to_latex }}}{% endif %}
+{% if entry.doi %}\\{\small DOI: \url{https://doi.org/{{ entry.doi }}}}{% endif %}
+{% if entry.url %}\\{\small \url{ {{ entry.url }} }}{% endif %}
+{% endfor %}
+\end{itemize}
+
+{% endfor %}
+
+\end{document}
