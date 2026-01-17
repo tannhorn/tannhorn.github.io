@@ -7,7 +7,13 @@ title: Projects
   <h2>Projects</h2>
   {% for project in site.data.projects %}
     <div class="project-entry">
-      <h3>{{ project.name }}</h3>
+      <h3>
+        {% if project.slug %}
+          <a href="{{ "/projects/" | append: project.slug | append: "/" | relative_url }}">{{ project.name }}</a>
+        {% else %}
+          {{ project.name }}
+        {% endif %}
+      </h3>
       <p>{{ project.summary }}</p>
       <p>Status: {{ project.status }}</p>
       {% if project.link %}

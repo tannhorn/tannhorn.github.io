@@ -1,12 +1,15 @@
 <header class="site-header">
   <div class="wrapper">
     <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title }}</a>
-    <nav class="site-nav">
-      <a href="{{ "/" | relative_url }}">Home</a>
-      <a href="{{ "/cv" | relative_url }}">CV</a>
-      <a href="{{ "/publications" | relative_url }}">Publications</a>
-      <a href="{{ "/projects" | relative_url }}">Projects</a>
-      <a href="{{ "/blog/" | relative_url }}">Blog</a>
-    </nav>
+    <div class="site-actions">
+      <nav class="site-nav">
+        <a href="{{ "/" | relative_url }}">Home</a>
+        <a href="{{ "/cv" | relative_url }}">CV</a>
+        <a href="{{ "/publications" | relative_url }}">Publications</a>
+        <a href="{{ "/projects" | relative_url }}">Projects</a>
+        <a href="{{ "/blog/" | relative_url }}">Blog</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
+    </div>
   </div>
 </header>

@@ -1,0 +1,6 @@
+AGENTS.md
+docs/SPEC.md
+_site/
+.jekyll-cache/
+.bundle/
+vendor/
