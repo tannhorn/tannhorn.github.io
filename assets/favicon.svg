@@ -6,8 +6,8 @@
     </linearGradient>
   </defs>
   <rect width="64" height="64" rx="12" fill="url(#sky)" />
-  <path d="M10 50 L26 28 L38 44 L50 30 L58 50 Z" fill="#2f5d62" />
-  <path d="M26 28 L30 34 L22 34 Z" fill="#f7f6f2" />
-  <path d="M50 30 L54 36 L46 36 Z" fill="#f7f6f2" />
+  <path d="M8 50 L24 28 L36 44 L48 30 L56 50 Z" fill="#2f5d62" />
+  <path d="M24 28 L28 34 L20 34 Z" fill="#f7f6f2" />
+  <path d="M48 30 L50 36 L43.3 36 Z" fill="#f7f6f2" />
   <path d="M6 52 H58" stroke="#1f1f1f" stroke-width="2" stroke-linecap="round" opacity="0.2" />
 </svg>
