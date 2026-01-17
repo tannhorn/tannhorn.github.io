@@ -1,9 +1,9 @@
-title: "Your Name Here"
-email: "you@example.com"
-description: "Placeholder bio - update in _config.yml and index.md"
-author: "Your Name Here"
+title: "Lubomír Bureš"
+email: "hello@winterlead.com"
+description: "Personal website of Lubomír Bureš, a nuclear engineer with deep experience in computational modelling and technical problem solving."
+author: "Lubomír Bureš"
 baseurl: ""
-url: "https://your-username.github.io"
+url: "https://tannhorn.github.io"
 
 theme: null
 markdown: kramdown
