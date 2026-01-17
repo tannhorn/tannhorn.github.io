@@ -1,48 +1,60 @@
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
-\usepackage[margin=0.75in]{geometry}
+\usepackage[margin=0.7in]{geometry}
+\usepackage{array}
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{titlesec}
-\usepackage{parskip}
+\usepackage{microtype}
+\IfFileExists{fontawesome5.sty}{\usepackage{fontawesome5}}{}
+\providecommand{\faEnvelope}{}
+\providecommand{\faGlobe}{}
+\providecommand{\faLinkedin}{}
+\providecommand{\faOrcid}{}
 
-\titleformat{\section}{\large\bfseries}{}{0pt}{}
-\setlist[itemize]{leftmargin=1.5em, noitemsep, topsep=0pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.15em}
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{0.9em}{0.45em}
+\setlist[itemize]{leftmargin=1.5em, itemsep=0.1em, topsep=0.1em}
 \urlstyle{same}
+\hypersetup{hidelinks}
+\raggedright
+\pagestyle{empty}
 
 \begin{document}
 
 \begin{center}
-{\LARGE {{ cv.basics.name | latex_escape }}}\\
-{% if cv.basics.tagline %}{\small {{ cv.basics.tagline | latex_escape }}}\\{% endif %}
-\small {{ contact_line }}
+{\LARGE \textbf{ {{ cv.basics.name | latex_escape }} }}\\[0.4em]
+{% if cv.basics.tagline %}{\normalsize {{ cv.basics.tagline | latex_escape }}}\\[0.4em]{% endif %}
+{\small {{ contact_line_primary }}}
+{% if contact_line_secondary %}\\[0.2em]{\small {{ contact_line_secondary }}}{% endif %}
 \end{center}
 
 {% for section in cv.sections %}
 \section*{ {{ section.title | latex_escape }} }
 
 {% if section.kind == "skills" %}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.28\textwidth}>{\raggedright\arraybackslash}p{0.72\textwidth}@{}}
 {% for category in section.categories %}
-\textbf{ {{ category.name | latex_escape }} }\\
+\textbf{ {{ category.name | latex_escape }} } &
 {% if category.items_list %}
 {{ category.items_list | join(", ") | latex_escape }}
-\\
 {% endif %}
 {% if category.items_md %}
-\begin{itemize}
 {% for item in category.items_md %}
-\item {{ item | md_to_latex }}
+{% if not loop.first %} \newline {% endif %}
+{{ item | md_to_latex }}
 {% endfor %}
-\end{itemize}
 {% endif %}
-\vspace{0.25em}
+\\
 {% endfor %}
+\end{tabular}
 
 {% elif section.kind == "education" %}
 {% for entry in section.entries %}
-\textbf{ {{ entry.degree | latex_escape }} }\\
-{{ entry.institution | latex_escape }}\hfill {{ entry.location | latex_escape }}\\
-{{ entry.dates | date_range_to_latex | latex_escape }}
+\textbf{ {{ entry.institution | latex_escape }} }\hfill \textit{ {{ entry.location | latex_escape }} }\\
+\textit{ {{ entry.degree | latex_escape }} }\hfill {{ entry.dates | date_range_to_latex | latex_escape }}
 {% if entry.details_md %}
 \begin{itemize}
 {% for item in entry.details_md %}
@@ -50,12 +62,12 @@
 {% endfor %}
 \end{itemize}
 {% endif %}
-\vspace{0.5em}
+\vspace{0.35em}
 {% endfor %}
 
 {% else %}
 {% for entry in section.entries %}
-\textbf{ {{ entry.org | latex_escape }} }\hfill {{ entry.location | latex_escape }}\\
+\textbf{ {{ entry.org | latex_escape }} }\hfill \textit{ {{ entry.location | latex_escape }} }\\
 {% for role in entry.roles %}
 \textit{ {{ role.title | latex_escape }} }\hfill {{ role.dates | date_range_to_latex | latex_escape }}\\
 {% if role.highlights_md %}
@@ -66,7 +78,7 @@
 \end{itemize}
 {% endif %}
 {% endfor %}
-\vspace{0.5em}
+\vspace{0.35em}
 {% endfor %}
 {% endif %}
 {% endfor %}

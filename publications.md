@@ -24,15 +24,7 @@ title: Publications
                 {{ entry.authors_md | markdownify }}
               </div>
             {% endif %}
-            <p class="pub-meta">
-              {% if entry.venue %}<span class="pub-meta-item">{{ entry.venue }}</span>{% endif %}
-              {% if entry.publication_type %}<span class="pub-meta-item">{{ entry.publication_type }}</span>{% endif %}
-              {% if entry.patent %}<span class="pub-meta-item">{{ entry.patent }}</span>{% endif %}
-              {% if entry.publisher %}<span class="pub-meta-item">{{ entry.publisher }}</span>{% endif %}
-              {% if entry.volume %}<span class="pub-meta-item">{{ entry.volume }}</span>{% endif %}
-              {% if entry.pages %}<span class="pub-meta-item">{{ entry.pages }}</span>{% endif %}
-              {% if entry.year %}<span class="pub-meta-item">{{ entry.year }}</span>{% endif %}
-            </p>
+            {% include pub_meta.html entry=entry %}
             {% if entry.note_md or entry.description_md or entry.credit_md %}
               <div class="pub-notes">
                 {% if entry.note_md %}

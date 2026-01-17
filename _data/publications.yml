@@ -1,4 +1,4 @@
-intro_md: "For non-first-author publications, the <a href=\"https://www.elsevier.com/researcher/author/policies-and-guidelines/credit-author-statement\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"CRediT author statement (opens in new tab)\">CRediT author statement</a> is used to indicate my contribution. Unpublished work is available upon request. The three most important publications are highlighted."
+intro_md: "For non-first-author publications, the [CRediT author statement](https://www.elsevier.com/researcher/author/policies-and-guidelines/credit-author-statement) is used to indicate my contribution. The three most important publications are highlighted."
 
 sections:
   - title: "Publications in peer-reviewed scientific journals"
@@ -139,7 +139,7 @@ sections:
         venue: "Proceedings of M&C 2023 — The International Conference on Mathematics and Computational Methods Applied to Nuclear Science and Engineering"
         doi: "10.5281/zenodo.11196185"
         highlight: false
-      - authors_md: "Ponce Tovar, M., Vidal-Ferrandiz, A., **Bureš, L.**, Ginestar, D., & Groth Jensen, J."
+      - authors_md: "Ponce Tovar, M., Vidal-Ferràndiz, A., **Bureš, L.**, Ginestar, D., & Groth Jensen, J."
         year: 2023
         title: "Investigation of neutron transport approximations and homogenization methods for a small molten salt reactor"
         venue: "Proceedings of M&C 2023 — The International Conference on Mathematics and Computational Methods Applied to Nuclear Science and Engineering"
@@ -221,4 +221,4 @@ sections:
       - authors_md: "**Bureš, L.**"
         year: 2016
         title: "Application of calculation codes based on Monte Carlo method for benchmark experiments (in Czech)"
-        description_md: "Poster presentation of bachelor's thesis at *16. Mikulášské setkání Mladé generace ČNS*, Brno, Czech Republic. Selected as best bachelor's thesis."
+        description_md: "Poster presentation of bachelor's thesis at *16.\\ Mikulášské setkání Mladé generace ČNS*, Brno, Czech Republic. Selected as best bachelor's thesis."

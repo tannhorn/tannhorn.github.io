@@ -4,12 +4,18 @@
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage[table]{xcolor}
-\usepackage{parskip}
+\usepackage{microtype}
 \usepackage{titlesec}
 
-\titleformat{\section}{\large\bfseries}{}{0pt}{}
-\setlist[itemize]{leftmargin=1.5em, noitemsep, topsep=0pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.15em}
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{1.1em}{0.5em}
+\newlist{publist}{itemize}{1}
+\setlist[publist]{leftmargin=1.2em, label=\textbullet, labelsep=0.5em, itemsep=0.35em, topsep=0.2em, parsep=0pt, align=left}
 \urlstyle{same}
+\hypersetup{hidelinks}
+\setlength{\emergencystretch}{1em}
 
 {% raw %}\newcommand{\highlight}[1]{\begingroup
   \setlength{\fboxsep}{1pt}\colorbox{yellow!30}{\parbox[t]{\dimexpr\linewidth-2\fboxsep\relax}{#1}}\endgroup
@@ -17,39 +23,59 @@
 
 \begin{document}
 
-\section*{Research Output}
+\begin{center}
+{\LARGE \textbf{Research Output}}
+\end{center}
 {% if publications.intro_md %}
 {{ publications.intro_md | md_to_latex }}
 {% endif %}
 
 {% for section in publications.sections %}
 \section*{ {{ section.title | latex_escape }} }
-\begin{itemize}
+\begin{publist}
 {% for entry in section.entries %}
-\item
+\item\leavevmode
 {% set item_text %}
 {% if section.type == "journal" %}
-{{ entry.authors_md | md_to_latex }} ({{ entry.year }}). {{ entry.title | latex_escape }}. \textit{ {{ entry.venue | latex_escape }} }{% if entry.volume %}, {{ entry.volume | latex_escape }}{% endif %}{% if entry.pages %}, {{ entry.pages | latex_escape }}{% endif %}.
+{{ entry.authors_md | md_to_latex }} ({{ entry.year }}). {{ entry.title | latex_escape }}. \textit{
+{{- entry.venue | latex_escape -}}
+}{% if entry.volume %}, {{ entry.volume | latex_escape }}{% endif %}{% if entry.pages %}, {{ entry.pages | latex_escape }}{% endif %}.
 {% elif section.type == "book" %}
-{{ entry.authors_md | md_to_latex }} ({{ entry.year }}). \textit{ {{ entry.title | latex_escape }} } ({{ entry.publication_type | latex_escape }}). {{ entry.publisher | latex_escape }}.
+{{ entry.authors_md | md_to_latex }} ({{ entry.year }}). \textit{
+{{- entry.title | latex_escape -}}
+} ({{ entry.publication_type | latex_escape }}). {{ entry.publisher | latex_escape }}.
 {% elif section.type == "proceedings" %}
-{{ entry.authors_md | md_to_latex }} ({{ entry.year }}). {{ entry.title | latex_escape }}. In \textit{ {{ entry.venue | latex_escape }} }.
+{{ entry.authors_md | md_to_latex }} ({{ entry.year }}). {{ entry.title | latex_escape }}. In \textit{
+{{- entry.venue | latex_escape -}}
+}.
 {% elif section.type == "patent" %}
-{{ entry.authors_md | md_to_latex }} ({{ entry.year }}). \textit{ {{ entry.title | latex_escape }} } ({{ entry.patent | latex_escape }}). {{ entry.venue | latex_escape }}.
+{{ entry.authors_md | md_to_latex }} ({{ entry.year }}). \textit{
+{{- entry.title | latex_escape -}}
+} ({{ entry.patent | latex_escape }}). {{ entry.venue | latex_escape }}.
 {% elif section.type == "contribution" %}
 {{ entry.authors_md | md_to_latex }} ({{ entry.year }}). {{ entry.title | latex_escape }}.
 {% else %}
 {{ entry.authors_md | md_to_latex }} ({{ entry.year }}). {{ entry.title | latex_escape }}.
 {% endif %}
 {% endset %}
-{% if entry.highlight %}\highlight{ {{ item_text | trim }} }{% else %}{{ item_text | trim }}{% endif %}
-{% if entry.note_md %}\\{\small {{ entry.note_md | md_to_latex }}}{% endif %}
-{% if entry.description_md %}\\{\small {{ entry.description_md | md_to_latex }}}{% endif %}
-{% if entry.credit_md %}\\{\small {{ entry.credit_md | md_to_latex }}}{% endif %}
-{% if entry.doi %}\\{\small DOI: \url{https://doi.org/{{ entry.doi }}}}{% endif %}
-{% if entry.url %}\\{\small \url{ {{ entry.url }} }}{% endif %}
+{% set entry_block %}
+{{ item_text | trim }}
+{% if entry.note_md %}\par{\small {{ entry.note_md | md_to_latex }}}{% endif %}
+{% if entry.description_md %}\par{\small {{ entry.description_md | md_to_latex }}}{% endif %}
+{% if entry.credit_md %}\par{\small {{ entry.credit_md | md_to_latex }}}{% endif %}
+{% if entry.doi %}\par{\small DOI: \href{https://doi.org/{{ entry.doi }}}{doi.org/{{ entry.doi | latex_escape }}}}{% endif %}
+{% if entry.url %}
+{% if section.type == "patent" %}
+\par{\small Link: \href{ {{- entry.url -}} }{ {{- entry.url | url_display | latex_escape -}} }}
+{% else %}
+\par{\small \href{ {{- entry.url -}} }{ {{- entry.url | url_display | latex_escape -}} }}
+{% endif %}
+{% endif %}
+{% endset %}
+{% if entry.highlight %}\highlight{ {{ entry_block | trim }} }{% else %}{{ entry_block | trim }}{% endif %}
+\par\smallskip
 {% endfor %}
-\end{itemize}
+\end{publist}
 
 {% endfor %}
 

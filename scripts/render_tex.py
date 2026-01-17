@@ -179,6 +179,7 @@ def render_templates(root: Path) -> int:
     env.filters["latex_escape"] = latex_escape
     env.filters["date_range_to_latex"] = date_range_to_latex
     env.filters["md_to_latex"] = lambda text: md_to_latex(text, pandoc_path, use_pypandoc)
+    env.filters["url_display"] = format_url_display
 
     out_dir = root / "tex" / "out"
     out_dir.mkdir(parents=True, exist_ok=True)
