@@ -24,7 +24,9 @@
 \begin{document}
 
 \begin{center}
-{\LARGE \textbf{Research Output}}
+{\LARGE \textbf{ {{ cv.basics.name | latex_escape }} }}\\[0.6em]
+{\Large Publications}
+{% if site.orcid %}\\[0.5em]{\small \href{ {{- site.orcid -}} }{ {{- site.orcid | url_display | latex_escape -}} }}{% endif %}
 \end{center}
 {% if publications.intro_md %}
 {{ publications.intro_md | md_to_latex }}
