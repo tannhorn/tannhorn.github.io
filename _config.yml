@@ -1,6 +1,7 @@
 title: "Your Name Here"
 email: "you@example.com"
 description: "Placeholder bio - update in _config.yml and index.md"
+author: "Your Name Here"
 baseurl: ""
 url: "https://your-username.github.io"
 
@@ -10,6 +11,7 @@ permalink: /blog/:year/:month/:day/:title/
 
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 collections:
   posts:
