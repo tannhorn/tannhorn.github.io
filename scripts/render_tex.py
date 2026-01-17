@@ -121,19 +121,35 @@ def build_site_context(root: Path) -> dict:
         "orcid": index_meta.get("orcid_url", ""),
     }
 
+def format_url_display(url: str) -> str:
+    display = re.sub(r"^https?://", "", url or "")
+    return display.rstrip("/")
 
-def build_contact_line(site: dict) -> str:
-    parts = []
+
+def build_contact_lines(site: dict) -> dict:
+    def link(url: str, icon: str) -> str:
+        display = format_url_display(url)
+        icon_part = f"{icon}\\ " if icon else ""
+        return r"%s\href{%s}{%s}" % (icon_part, url, display)
+
+    primary = []
+    secondary = []
+
     email = site.get("email")
     if email:
-        parts.append(r"\href{mailto:%s}{%s}" % (email, email))
+        primary.append(r"\faEnvelope\ \href{mailto:%s}{%s}" % (email, email))
     if site.get("website"):
-        parts.append(r"\url{%s}" % site["website"])
+        primary.append(link(site["website"], r"\faGlobe"))
     if site.get("linkedin"):
-        parts.append(r"\url{%s}" % site["linkedin"])
+        secondary.append(link(site["linkedin"], r"\faLinkedin"))
     if site.get("orcid"):
-        parts.append(r"\url{%s}" % site["orcid"])
-    return r" \quad ".join(parts)
+        secondary.append(link(site["orcid"], r"\faOrcid"))
+
+    separator = r" \textbar\textbar\ "
+    return {
+        "primary": separator.join(primary),
+        "secondary": separator.join(secondary),
+    }
 
 
 def render_templates(root: Path) -> int:
@@ -167,11 +183,13 @@ def render_templates(root: Path) -> int:
     out_dir = root / "tex" / "out"
     out_dir.mkdir(parents=True, exist_ok=True)
 
+    contact_lines = build_contact_lines(site)
     context = {
         "cv": cv_data,
         "publications": publications_data,
         "site": site,
-        "contact_line": build_contact_line(site),
+        "contact_line_primary": contact_lines["primary"],
+        "contact_line_secondary": contact_lines["secondary"],
     }
 
     for name, output in (("cv.tex.j2", out_dir / "cv.tex"), ("publications.tex.j2", out_dir / "publications.tex")):
