@@ -1,0 +1,9 @@
+- name: "Project One"
+  summary: "Short description of the project and its impact."
+  link: "#"
+  status: "Ongoing"
+
+- name: "Project Two"
+  summary: "One-sentence summary with a clear outcome."
+  link: "#"
+  status: "Completed"

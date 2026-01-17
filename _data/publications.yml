@@ -1,0 +1,13 @@
+- title: "Sample Publication Title"
+  authors: "Your Name, Coauthor A, Coauthor B"
+  venue: "Journal/Conference Name"
+  year: "2024"
+  link: "#"
+  note: "Replace with DOI or project page link."
+
+- title: "Another Publication Title"
+  authors: "Your Name, Coauthor C"
+  venue: "Workshop Name"
+  year: "2022"
+  link: "#"
+  note: "Optional note about awards or relevance."

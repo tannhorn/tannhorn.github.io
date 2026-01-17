@@ -1,0 +1,23 @@
+title: "Your Name Here"
+email: "you@example.com"
+description: "Placeholder bio - update in _config.yml and index.md"
+baseurl: ""
+url: "https://your-username.github.io"
+
+theme: null
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
+
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
