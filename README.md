@@ -64,3 +64,9 @@ If you update dependencies, keep `github-pages` aligned with the GitHub Pages bu
 ## Blog feed
 
 The RSS/Atom feed is provided by `jekyll-feed` and available at `/feed.xml` once the site is built.
+
+## License
+
+Code (templates, styles, scripts, and configuration) is licensed under the MIT License in `LICENSE`.
+Personal content (CV, blog posts, portfolio, and related data/assets) is reserved by the author in
+`LICENSE-CONTENT`. Third-party materials remain under their original licenses and attribution terms.
