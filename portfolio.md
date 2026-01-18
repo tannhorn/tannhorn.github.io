@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Projects
+title: Portfolio
 ---
 
 <section>
-  <h2>Projects</h2>
+  <h2>Portfolio</h2>
   {% for project in site.data.projects %}
     <div class="project-entry">
       <h3>
         {% if project.slug %}
-          <a href="{{ "/projects/" | append: project.slug | append: "/" | relative_url }}">{{ project.name }}</a>
+          <a href="{{ "/portfolio/" | append: project.slug | append: "/" | relative_url }}">{{ project.name }}</a>
         {% else %}
           {{ project.name }}
         {% endif %}
@@ -23,4 +23,4 @@ title: Projects
   {% endfor %}
 </section>
 
-<p>Replace the project data in <code>_data/projects.yml</code>.</p>
+<p>Replace the portfolio data in <code>_data/projects.yml</code>.</p>

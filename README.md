@@ -27,7 +27,7 @@ bundle exec jekyll build
 - Home page: `index.md`.
 - Blog index: `blog/index.md`.
 - Blog posts: `_posts/*.md` (date in filename).
-- Projects: `projects.md`.
+- Portfolio: `portfolio.md`.
 - CV/publications: `cv.md` and `publications.md`, backed by `_data/cv.yml` and `_data/publications.yml`.
 - Assets: `assets/` (images, CSS, etc).
 
