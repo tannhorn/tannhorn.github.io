@@ -3,24 +3,37 @@ layout: page
 title: Portfolio
 ---
 
-<section>
-  <h2>Portfolio</h2>
-  {% for project in site.data.projects %}
-    <div class="project-entry">
-      <h3>
-        {% if project.slug %}
-          <a href="{{ "/portfolio/" | append: project.slug | append: "/" | relative_url }}">{{ project.name }}</a>
-        {% else %}
-          {{ project.name }}
-        {% endif %}
-      </h3>
-      <p>{{ project.summary }}</p>
-      <p>Status: {{ project.status }}</p>
-      {% if project.link %}
-        <p><a href="{{ project.link }}">Project link</a></p>
+{% for category in site.data.portfolio %}
+  <section class="cv-section">
+    <div class="cv-section__header">
+      <h2>{{ category.name }}</h2>
+      {% if category.tagline %}
+        <p class="cv-meta">{{ category.tagline }}</p>
       {% endif %}
     </div>
-  {% endfor %}
-</section>
-
-<p>Replace the portfolio data in <code>_data/projects.yml</code>.</p>
+    <div class="cv-section__body">
+      {% for project in category.items %}
+        <div class="cv-entry">
+          <div class="cv-entry__header">
+            <h3 class="cv-entry__title">
+              {% if project.slug %}
+                <a href="{{ "/portfolio/" | append: project.slug | append: "/" | relative_url }}">{{ project.name }}</a>
+              {% else %}
+                {{ project.name }}
+              {% endif %}
+            </h3>
+            <span class="cv-entry__meta">{{ project.status }}</span>
+          </div>
+          <p>{{ project.summary }}</p>
+          {% if project.link %}
+            <p>
+              <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer">
+                {{ project.name }} website
+              </a>
+            </p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endfor %}

@@ -40,7 +40,7 @@ sections:
       - org: "Winterlead"
         location: "Remote"
         roles:
-          - title: "Freelance Consultant"
+          - title: "Independent Consultant"
             dates: "April 2024 to present"
             highlights_md:
               - "Provide software development, computational engineering, and consultancy services on ad hoc basis."
