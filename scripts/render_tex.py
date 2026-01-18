@@ -155,10 +155,10 @@ def build_contact_lines(site: dict) -> dict:
 def render_templates(root: Path) -> int:
     if yaml is None:
         print("PyYAML is not installed. Install it to render TeX (pip install pyyaml).")
-        return 0
+        return 1
     if jinja2 is None:
         print("Jinja2 is not installed. Install it to render TeX (pip install jinja2).")
-        return 0
+        return 1
 
     data_dir = root / "_data"
     cv_data = load_yaml(data_dir / "cv.yml")
@@ -211,7 +211,7 @@ def main() -> int:
         return render_templates(root)
     except RuntimeError as exc:
         print(str(exc))
-        return 0
+        return 1
 
 
 if __name__ == "__main__":
