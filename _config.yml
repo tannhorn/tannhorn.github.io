@@ -3,7 +3,7 @@ email: "hello@winterlead.com"
 description: "Personal website of Lubomír Bureš, a nuclear engineer with deep experience in computational modelling and technical problem solving."
 author: "Lubomír Bureš"
 baseurl: ""
-url: "https://tannhorn.github.io"
+url: "https://www.lubomirbures.com"
 
 theme: null
 markdown: kramdown
