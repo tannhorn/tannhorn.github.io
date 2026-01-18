@@ -4,9 +4,14 @@ title: Publications
 pdf_link: /assets/publications.pdf
 ---
 
-{% if site.data.publications.intro_md %}
+{% if site.data.publications.intro_focus_md %}
   <div class="pub-intro">
-    {{ site.data.publications.intro_md | markdownify }}
+    {{ site.data.publications.intro_focus_md | markdownify }}
+  </div>
+{% endif %}
+{% if site.data.publications.intro_credit_md %}
+  <div class="pub-intro-note">
+    {{ site.data.publications.intro_credit_md | markdownify }}
   </div>
 {% endif %}
 

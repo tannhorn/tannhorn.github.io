@@ -343,8 +343,65 @@ a:focus-visible {
   background: color-mix(in srgb, var(--accent) 8%, transparent);
 }
 
-.pub-intro p {
+.pub-intro,
+.pub-intro-note {
+  margin-bottom: 24px;
+}
+
+.pub-intro p,
+.pub-intro-note p {
   margin: 0;
+}
+
+.pub-intro p + p,
+.pub-intro-note p + p {
+  margin-top: 0.5rem;
+}
+
+.pub-intro-note {
+  padding: 12px 18px;
+  border-left: 3px solid var(--border);
+  background: color-mix(in srgb, var(--surface) 85%, var(--border));
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.project-summary {
+  margin: 8px 0 10px;
+}
+
+.project-meta {
+  margin: 0;
+}
+
+.project-meta-row {
+  display: flex;
+  gap: 10px;
+  margin: 6px 0;
+}
+
+.project-meta-row dt {
+  min-width: 70px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.project-meta-row dd {
+  margin: 0;
+}
+
+.project-links {
+  margin: 10px 0 0;
+}
+
+.project-links a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 640px) {

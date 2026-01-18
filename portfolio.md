@@ -13,7 +13,7 @@ title: Portfolio
     </div>
     <div class="cv-section__body">
       {% for project in category.items %}
-        <div class="cv-entry">
+        <div class="project-entry">
           <div class="cv-entry__header">
             <h3 class="cv-entry__title">
               {% if project.slug %}
@@ -24,12 +24,32 @@ title: Portfolio
             </h3>
             <span class="cv-entry__meta">{{ project.status }}</span>
           </div>
-          <p>{{ project.summary }}</p>
+          <p class="project-summary"><strong>Focus:</strong> {{ project.summary }}</p>
+          {% if project.role or project.tools or project.outcome %}
+            <dl class="project-meta">
+              {% if project.role %}
+                <div class="project-meta-row">
+                  <dt>Role</dt>
+                  <dd>{{ project.role }}</dd>
+                </div>
+              {% endif %}
+              {% if project.tools %}
+                <div class="project-meta-row">
+                  <dt>Tools</dt>
+                  <dd>{{ project.tools }}</dd>
+                </div>
+              {% endif %}
+              {% if project.outcome %}
+                <div class="project-meta-row">
+                  <dt>Outcome</dt>
+                  <dd>{{ project.outcome }}</dd>
+                </div>
+              {% endif %}
+            </dl>
+          {% endif %}
           {% if project.link %}
-            <p>
-              <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer" aria-label="Visit {{ project.name | escape }} website (opens in new tab)">
-                {{ project.name }} website
-              </a>
+            <p class="project-links">
+              <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer" aria-label="Visit {{ project.name | escape }} website (opens in new tab)">External site</a>
             </p>
           {% endif %}
         </div>

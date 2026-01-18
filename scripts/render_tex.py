@@ -112,7 +112,7 @@ def build_site_context(root: Path) -> dict:
 
     url = (config.get("url") or "").rstrip("/")
     baseurl = (config.get("baseurl") or "").rstrip("/")
-    website = url + baseurl if url else index_meta.get("business_url", "")
+    website = url + baseurl if url else index_meta.get("consulting_url", "")
 
     return {
         "email": config.get("email", ""),

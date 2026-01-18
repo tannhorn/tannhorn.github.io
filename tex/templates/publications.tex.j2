@@ -28,8 +28,12 @@
 {\Large Publications}
 {% if site.orcid %}\\[0.5em]{\small \href{ {{- site.orcid -}} }{ {{- site.orcid | url_display | latex_escape -}} }}{% endif %}
 \end{center}
-{% if publications.intro_md %}
-{{ publications.intro_md | md_to_latex }}
+{% if publications.intro_focus_md %}
+{{ publications.intro_focus_md | md_to_latex }}
+{% endif %}
+{% if publications.intro_credit_md %}
+\par\medskip
+{\small {{ publications.intro_credit_md | md_to_latex }}}
 {% endif %}
 
 {% for section in publications.sections %}
