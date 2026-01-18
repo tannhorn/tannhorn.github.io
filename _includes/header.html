@@ -1,13 +1,15 @@
 <header class="site-header">
   <div class="wrapper">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title }}</a>
     <div class="site-actions">
+      {% assign current_url = page.url | replace: "/index.html", "/" %}
       <nav class="site-nav" aria-label="Primary">
-        <a href="{{ "/" | relative_url }}">Home</a>
-        <a href="{{ "/cv" | relative_url }}">CV</a>
-        <a href="{{ "/publications" | relative_url }}">Publications</a>
-        <a href="{{ "/portfolio" | relative_url }}">Portfolio</a>
-        <a href="{{ "/blog/" | relative_url }}">Blog</a>
+        <a href="{{ "/" | relative_url }}"{% if current_url == "/" %} aria-current="page"{% endif %}>Home</a>
+        <a href="{{ "/cv" | relative_url }}"{% if current_url contains "/cv" %} aria-current="page"{% endif %}>CV</a>
+        <a href="{{ "/publications" | relative_url }}"{% if current_url contains "/publications" %} aria-current="page"{% endif %}>Publications</a>
+        <a href="{{ "/portfolio" | relative_url }}"{% if current_url contains "/portfolio" %} aria-current="page"{% endif %}>Portfolio</a>
+        <a href="{{ "/blog/" | relative_url }}"{% if current_url contains "/blog/" %} aria-current="page"{% endif %}>Blog</a>
       </nav>
       <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode">
         <span class="theme-icon theme-icon-sun" aria-hidden="true">

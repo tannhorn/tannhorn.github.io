@@ -27,7 +27,7 @@ title: Portfolio
           <p>{{ project.summary }}</p>
           {% if project.link %}
             <p>
-              <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer">
+              <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer" aria-label="Visit {{ project.name | escape }} website (opens in new tab)">
                 {{ project.name }} website
               </a>
             </p>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tannhorn.github.io/sitemap.xml
