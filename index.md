@@ -2,7 +2,6 @@
 layout: home
 title: Home
 hero: "Lubomír Bureš"
-hero_subtitle: "A nuclear engineer with deep experience in computational modelling and technical problem solving."
 about: |
   I build and validate computational models that help teams make confident engineering decisions. My background is in computational physics and engineering, and I've worked on problems ranging from microscopic physics phenomena to system-level analyses.
 
@@ -15,5 +14,3 @@ scholar_url: "https://scholar.google.com/citations?user=rQRIrc4AAAAJ"
 orcid_url: "https://www.orcid.org/0000-0001-6204-0938"
 consulting_url: "https://winterlead.com"
 ---
-
-<!-- This is optional extra content for the home page -->

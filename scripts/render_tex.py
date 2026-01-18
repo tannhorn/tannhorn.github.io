@@ -119,6 +119,7 @@ def build_site_context(root: Path) -> dict:
         "website": website,
         "linkedin": index_meta.get("linkedin_url", ""),
         "orcid": index_meta.get("orcid_url", ""),
+        "tagline": config.get("tagline", ""),
     }
 
 def format_url_display(url: str) -> str:

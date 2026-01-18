@@ -1,7 +1,5 @@
 basics:
   name: "Lubomír Bureš"
-  # TODO: Add or edit a short tagline for the CV header.
-  tagline: "A nuclear engineer with deep experience in computational modelling and technical problem solving."
 
 sections:
   - title: "Professional Experience"

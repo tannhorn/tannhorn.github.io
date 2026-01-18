@@ -4,7 +4,10 @@ layout: default
 <section class="hero">
   <!-- <p class="hero-kicker">Personal website</p> -->
   <h1>{{ page.hero | default: "Your Name Here" }}</h1>
-  <p class="hero-subtitle">{{ page.hero_subtitle | default: "Replace this hero line with your own" }}</p>
+  {% assign hero_subtitle = site.tagline | default: page.hero_subtitle %}
+  {% if hero_subtitle %}
+    <p class="hero-subtitle">{{ hero_subtitle }}</p>
+  {% endif %}
 </section>
 
 <section class="section">
@@ -30,8 +33,8 @@ layout: default
   <p>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
 </section>
 
-<!-- Optional extra content for the home page.
-<section class="section">
-  {{ content }}
-</section>
--->
+{% if page.show_home_content %}
+  <section class="section">
+    {{ content }}
+  </section>
+{% endif %}
