@@ -30,6 +30,7 @@ bundle exec jekyll build
 - Portfolio: `portfolio.md`.
 - CV/publications: `cv.md` and `publications.md`, backed by `_data/cv.yml` and `_data/publications.yml`.
 - Assets: `assets/` (images, CSS, etc).
+- Favicon: `assets/favicon.svg` plus root `favicon.ico` fallback for browsers that request `/favicon.ico`.
 
 ## CV and publications
 

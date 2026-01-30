@@ -3,7 +3,7 @@ layout: page
 title: Blog
 ---
 
-<p>Subscribe via <a href="{{ "/feed.xml" | relative_url }}">RSS/Atom feed</a>.</p>
+<p>If I find the need to write something up, I will post it here. No guarantee of content, but you can still subscribe via <a href="{{ "/feed.xml" | relative_url }}">RSS/Atom feed</a>.</p>
 
 <ul>
   {% for post in site.posts %}
