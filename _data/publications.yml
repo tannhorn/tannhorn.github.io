@@ -5,6 +5,15 @@ sections:
   - title: "Publications in peer-reviewed scientific journals"
     type: "journal"
     entries:
+      - authors_md: "Pfahl, P., Kędzierska, B., I. Kim, Chambon, A., Fischer, L., **Bureš, L.**, Groth-Jensen, J., Y. Kim, Rineiski, A., & Lauritzen, B."
+        year: 2026
+        title: "Multi-physics benchmark for a thermal molten salt reactor"
+        venue: "Nuclear Engineering and Design"
+        volume: "449"
+        pages: "114790"
+        doi: "10.1016/j.nucengdes.2026.114790"
+        highlight: false
+        credit_md: "**CRediT author statement:** Conceptualization, Methodology, Software, Validation, Formal Analysis, Investigation, Data Curation, Visualization, Writing – Original Draft, Writing – Review & Editing, Supervision."
       - authors_md: "**Bureš, L.**"
         year: 2025
         title: "Comparison of analytical models for frequency response and linear stability of molten salt reactors"
