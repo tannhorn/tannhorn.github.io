@@ -69,5 +69,6 @@ The RSS/Atom feed is provided by `jekyll-feed` and available at `/feed.xml` once
 ## License
 
 Code (templates, styles, scripts, and configuration) is licensed under the MIT License in `LICENSE`.
-Personal content (CV, blog posts, portfolio, and related data/assets) is reserved by the author in
+Reserved personal content (CV, portfolio, and related data/assets) is all rights reserved per
+`LICENSE-CONTENT`. Blog posts and associated blog assets are licensed under CC BY-SA 4.0 per
 `LICENSE-CONTENT`. Third-party materials remain under their original licenses and attribution terms.

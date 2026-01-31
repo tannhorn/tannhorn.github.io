@@ -5,7 +5,7 @@ Copyright (c) 2026 Lubomir Bures
 This repository contains both software (site code) and non-software content.
 The MIT License in LICENSE applies to the site code only.
 
-## RESERVED CONTENT (ALL RIGHTS RESERVED)
+1) RESERVED CONTENT (ALL RIGHTS RESERVED)
 Except where otherwise noted, the following website content is NOT licensed for
 reuse, redistribution, or modification. All rights are reserved.
 
@@ -23,7 +23,7 @@ This includes (not limited to):
 - assets/favicon.svg
 - favicon.ico
 
-## BLOG CONTENT (CC BY-SA 4.0)
+2) BLOG CONTENT (CC BY-SA 4.0)
 Blog posts and associated blog assets are licensed under the Creative Commons
 Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) license.
 
@@ -35,12 +35,12 @@ This applies to:
 License text:
 https://creativecommons.org/licenses/by-sa/4.0/
 
-## THIRD-PARTY MATERIALS
+3) THIRD-PARTY MATERIALS
 Third-party materials (including quotes, figures, images, or code) remain subject
 to their original licenses and attribution requirements. This license file does
 not grant any rights to such materials.
 
-## OVERRIDES
+4) OVERRIDES
 Where a file or page explicitly states a different license (e.g., in front matter,
 a footer, a nearby LICENSE/NOTICE file, or an inline credit), that statement
 takes precedence for that material.
