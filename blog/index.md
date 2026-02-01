@@ -8,7 +8,7 @@ title: Blog
 <ul>
   {% for post in site.posts %}
     <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <a href="{{ post.url | relative_url }}">{{ post.display_title | default: post.title }}</a>
       <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
     </li>
   {% endfor %}
