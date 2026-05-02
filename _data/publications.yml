@@ -5,7 +5,15 @@ sections:
   - title: "Publications in peer-reviewed scientific journals"
     type: "journal"
     entries:
-      - authors_md: "Pfahl, P., Kędzierska, B., I. Kim, Chambon, A., Fischer, L., **Bureš, L.**, Groth-Jensen, J., Y. Kim, Rineiski, A., & Lauritzen, B."
+      - authors_md: "**Bureš, L.**"
+        year: 2026
+        title: "Residence-time theory applied to circulating-fuel reactors: zero-power analysis"
+        venue: "Nuclear Science and Engineering"
+        pages: "1--18"
+        doi: "10.1080/00295639.2026.2646103"
+        highlight: false
+        note_md: "Preprint available at [arXiv:2509.07989](https://arxiv.org/abs/2509.07989)."
+      - authors_md: "Pfahl, P., Kędzierska, B., Kim, I., Chambon, A., Fischer, L., **Bureš, L.**, Groth-Jensen, J., Kim, Y., Rineiski, A., & Lauritzen, B."
         year: 2026
         title: "Multi-physics benchmark for a thermal molten salt reactor"
         venue: "Nuclear Engineering and Design"
@@ -15,11 +23,11 @@ sections:
         highlight: false
         credit_md: "**CRediT author statement:** Conceptualization, Methodology, Software, Validation, Formal Analysis, Investigation, Data Curation, Visualization, Writing – Original Draft, Writing – Review & Editing, Supervision."
       - authors_md: "**Bureš, L.**"
-        year: 2025
+        year: 2026
         title: "Comparison of analytical models for frequency response and linear stability of molten salt reactors"
         venue: "Nuclear Science and Engineering"
-        volume: ""
-        pages: "1--24"
+        volume: "200(sup1)"
+        pages: "S503--S526"
         doi: "10.1080/00295639.2025.2460318"
         highlight: false
       - authors_md: "**Bureš, L.**, Bucci, M., Sato, Y., & Bucci, M."
@@ -143,13 +151,13 @@ sections:
         doi: "10.13182/PHYSOR24-43471"
         highlight: false
         credit_md: "**CRediT author statement:** Conceptualization, Methodology, Writing – Review & Editing."
-      - authors_md: "**Bureš, L.**, Ponce Tovar, M., & Groth Jensen, J."
+      - authors_md: "**Bureš, L.**, Ponce Tovar, M., & Groth-Jensen, J."
         year: 2023
         title: "Distributed-parameter linear stability analysis of a double-pass circulating-fuel reactor"
         venue: "Proceedings of M&C 2023 — The International Conference on Mathematics and Computational Methods Applied to Nuclear Science and Engineering"
         doi: "10.5281/zenodo.11196185"
         highlight: false
-      - authors_md: "Ponce Tovar, M., Vidal-Ferràndiz, A., **Bureš, L.**, Ginestar, D., & Groth Jensen, J."
+      - authors_md: "Ponce Tovar, M., Vidal-Ferràndiz, A., **Bureš, L.**, Ginestar, D., & Groth-Jensen, J."
         year: 2023
         title: "Investigation of neutron transport approximations and homogenization methods for a small molten salt reactor"
         venue: "Proceedings of M&C 2023 — The International Conference on Mathematics and Computational Methods Applied to Nuclear Science and Engineering"
@@ -231,4 +239,4 @@ sections:
       - authors_md: "**Bureš, L.**"
         year: 2016
         title: "Application of calculation codes based on Monte Carlo method for benchmark experiments (in Czech)"
-        description_md: "Poster presentation of bachelor's thesis at *16.\\ Mikulášské setkání Mladé generace ČNS*, Brno, Czech Republic. Selected as best bachelor's thesis."
+        description_md: "Poster presentation of bachelor's thesis at *16.\ Mikulášské setkání Mladé generace ČNS*, Brno, Czech Republic. Selected as best bachelor's thesis."
