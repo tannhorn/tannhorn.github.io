@@ -8,7 +8,12 @@ if ! command -v latexmk >/dev/null 2>&1; then
   exit 0
 fi
 
-python3 "$root_dir/scripts/render_tex.py"
+python_bin="${PYTHON:-python3}"
+if [[ -x "$root_dir/.venv/bin/python" ]]; then
+  python_bin="$root_dir/.venv/bin/python"
+fi
+
+"$python_bin" "$root_dir/scripts/render_tex.py"
 
 mkdir -p "$root_dir/assets"
 

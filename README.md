@@ -6,6 +6,9 @@
 
 ```bash
 bundle install
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install -r requirements.txt
 ```
 
 Recommended Ruby version: `3.3.4` (see `.ruby-version`).
@@ -43,7 +46,7 @@ bundle exec jekyll build
 Render TeX from YAML:
 
 ```bash
-python3 scripts/render_tex.py
+python scripts/render_tex.py
 ```
 
 Build PDFs (requires `latexmk`):

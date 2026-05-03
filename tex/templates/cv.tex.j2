@@ -36,7 +36,7 @@
 \section*{ {{ section.title | latex_escape }} }
 
 {% if section.kind == "skills" %}
-\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.28\textwidth}>{\raggedright\arraybackslash}p{0.72\textwidth}@{}}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.21\textwidth}>{\raggedright\arraybackslash}p{0.81\textwidth}@{}}
 {% for category in section.categories %}
 \textbf{ {{ category.name | latex_escape }} } &
 {% if category.items_list %}

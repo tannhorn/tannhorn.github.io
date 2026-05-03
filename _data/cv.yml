@@ -41,7 +41,7 @@ sections:
           - title: "Independent Consultant"
             dates: "April 2024 to present"
             highlights_md:
-              - "Provide software development, computational engineering, and consultancy services on ad hoc basis."
+              - "Provide software development, computational engineering, and consultancy services on an ad hoc basis."
               - "Developed software solutions for Quantified Carbon."
               - "Volunteered technical expertise to the Repower Initiative."
 
@@ -62,7 +62,7 @@ sections:
         location: "Zürich & Lausanne, Switzerland"
         details_md:
           - "*Thesis*: Direct numerical simulation of phase change in the presence of non-condensable gases"
-          - "*Achievements*: Graduated with distinction, overall GPA: 3.973/4.000 (third best among 1043 Master graduates). Awarded the EPFL Excellence Fellowship over the duration of the study programme."
+          - "*Achievements*: Graduated with distinction, overall GPA: 3.97/4.00 (third best among 1043 Master graduates). Awarded the EPFL Excellence Fellowship over the duration of the study programme."
           - "*Certifications*: Received the European Master of Science in Nuclear Engineering certification."
           - "*Internships*: National Cooperative for the Disposal of Radioactive Waste (Wettingen, Switzerland)."
           - "*Extracurricular*: Represented the class in the EPFL student organisation (Fall semester 2016)."
@@ -72,19 +72,19 @@ sections:
         location: "Prague, Czech Republic"
         details_md:
           - "*Thesis*: Application of calculation codes based on Monte-Carlo method for benchmark experiments"
-          - "*Achievements*: Graduated with honours, overall GPA: 3.935/4.000. Won a student thesis competition. Received the 2015 Talented Student Award from the Czech Technical University."
+          - "*Achievements*: Graduated with honours, overall GPA: 3.94/4.00. Won a student thesis competition. Received the 2015 Talented Student Award from the Czech Technical University."
           - "*Internships*: Nuclear Physics Institute of the Czech Academy of Sciences (Řež, Czech Republic), Joint Institute for Nuclear Research (Dubna, Russia)."
 
   - title: "Skills"
     kind: "skills"
     categories:
       - name: "Languages"
-        items_md:
-          - "Czech: Native speaker."
-          - "English: Full professional proficiency (C2), certificate: Cambridge English: Advanced (CAE), grade A."
-          - "German: Professional working proficiency (C1)."
-          - "Danish: Professional working proficiency (B2), certificate: Prøve i Dansk 3, grade 8.5/12."
-      - name: "Programming Languages"
+        items_list:
+          - "Czech native"
+          - "English C2"
+          - "German C1"
+          - "Danish B2: Prøve i Dansk 3 -- 8.5/12."
+      - name: "Programming"
         items_list:
           - "Python"
           - "C++"
@@ -113,6 +113,13 @@ sections:
             dates: "September 2025 to present"
             highlights_md:
               - "Organise events promoting knowledge and education about nuclear and atomic technology."
+      - org: "Kildevæld Kulturcenter, Digitalt Værksted"
+        location: "Copenhagen, Denmark"
+        roles:
+          - title: "Volunteer / Superuser"
+            dates: "October 2025 to present"
+            highlights_md:
+              - "Support open workshop sessions by helping citizens use digital fabrication tools, including 3D printing and laser cutting, and by sparring on project ideas."
       - org: "PhD and Postdoc Association"
         location: "Paul Scherrer Institute, Switzerland"
         roles:
@@ -122,7 +129,12 @@ sections:
               - "Oversaw the creation of the association's bylaws, enabling its registration as a non-profit organisation."
               - "Led the association through the challenging times of the Covid-19 pandemic, ensuring continued support and engagement for members."
               - "Represented the association externally and within the institute, enhancing its visibility and influence."
-          - title: "Social Committee Head"
-            dates: "March 2019 to September 2019"
+              - "March 2019 to September 2019: Social Committee Head."
+      - org: "Various"
+        location: "Europe-wide"
+        roles:
+          - title: "Volunteer / Event Organiser"
+            dates: "October 2018 to November 2023"
             highlights_md:
-              - "Organised social events and activities, fostering a sense of community among members."
+              - "Volunteered for and helped organise multiple climate-change-related events across Europe."
+              - "Represented the Nuclear for Climate initiative at the UN Climate Change Conference COP25 in Madrid."
