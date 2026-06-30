@@ -118,6 +118,25 @@ sections:
   - title: "Peer-reviewed conference proceedings"
     type: "proceedings"
     entries:
+      - authors_md: "**Bureš, L.**, & Raffuzzi, V."
+        year: 2026
+        title: "Stochastic point kinetics model of circulating-fuel reactors under perfect mixing approximation"
+        venue: "Proceedings of PHYSOR 2026 — The International Conference on Physics of Reactors"
+        note_md: "Preprint available at [arXiv:2602.11191](https://arxiv.org/abs/2602.11191)."
+        doi: "10.5281/zenodo.20803942"
+        highlight: false
+      - authors_md: "**Bureš, L.**"
+        year: 2026
+        title: "Nuclear chain reaction modelled via a linear Hawkes process"
+        venue: "Proceedings of PHYSOR 2026 — The International Conference on Physics of Reactors"
+        doi: "10.5281/zenodo.20803273"
+        highlight: false
+      - authors_md: "**Bureš, L.**, & Elter, Zs."
+        year: 2026
+        title: "Design and neutronics of a physical subcritical-assembly simulator for reactor-physics education"
+        venue: "Proceedings of PHYSOR 2026 — The International Conference on Physics of Reactors"
+        doi: "10.5281/zenodo.20804104"
+        highlight: false
       - authors_md: "**Bureš, L.**, & Nilsson, P."
         year: 2025
         title: "Impacts of internal heating on flow and temperature distribution in channels"

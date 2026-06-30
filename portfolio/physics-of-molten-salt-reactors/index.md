@@ -19,6 +19,6 @@ This page outlines my ongoing research into molten-salt reactor (MSR) physics an
 
 <h2>Outcomes</h2>
 <ul>
-<li>Published four peer-reviewed journal papers as well as seven peer-reviewed conference papers.</li>
+<li>Published four peer-reviewed journal papers as well as eight peer-reviewed conference papers.</li>
 <li>Bolstered company's technical visibility.</li>
 </ul>
