@@ -219,6 +219,12 @@ sections:
   - title: "Patents and licences"
     type: "patent"
     entries:
+      - authors_md: "**Bureš, L.**"
+        year: 2026
+        title: "A molten salt reactor"
+        patent: "International Patent Application WO 2026/149792 A1"
+        venue: "Geneva, Switzerland: World Intellectual Property Organization"
+        url: "https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2026149792"
       - authors_md: "**Bureš, L.**, Rodriguez Ruocco, I., & Schofield, A. V."
         year: 2025
         title: "A method of operating a molten salt reactor"
