@@ -2,6 +2,8 @@
 layout: page
 title: Publications
 pdf_link: /assets/publications.pdf
+section_nav_data: publications
+section_nav_prefix: publications
 ---
 
 {% if site.data.publications.intro_focus_md %}
@@ -16,7 +18,7 @@ pdf_link: /assets/publications.pdf
 {% endif %}
 
 {% for section in site.data.publications.sections %}
-  <section class="pub-section">
+  <section class="pub-section" id="publications-{{ section.title | slugify }}">
     <div class="pub-section__header">
       <h2>{{ section.title }}</h2>
     </div>

@@ -2,10 +2,12 @@
 layout: page
 title: CV
 pdf_link: /assets/cv.pdf
+section_nav_data: cv
+section_nav_prefix: cv
 ---
 
 {% for section in site.data.cv.sections %}
-  <section class="cv-section">
+  <section class="cv-section" id="cv-{{ section.title | slugify }}">
     <div class="cv-section__header">
       <h2>{{ section.title }}</h2>
     </div>

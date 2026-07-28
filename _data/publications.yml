@@ -2,7 +2,7 @@ intro_focus_md: "Research focuses on computational modelling of physics problems
 intro_credit_md: "For non-first-author publications, the [CRediT author statement](https://www.elsevier.com/researcher/author/policies-and-guidelines/credit-author-statement) is used to indicate my contribution. The three most important publications are highlighted."
 
 sections:
-  - title: "Publications in peer-reviewed scientific journals"
+  - title: "Publications in Peer-Reviewed Scientific Journals"
     type: "journal"
     entries:
       - authors_md: "**Bureš, L.**"
@@ -105,7 +105,7 @@ sections:
         doi: "10.1080/00295639.2018.1442059"
         highlight: false
 
-  - title: "Peer-reviewed books/monographs"
+  - title: "Peer-Reviewed Books/Monographs"
     type: "book"
     entries:
       - authors_md: "**Bureš, L.**"
@@ -115,7 +115,7 @@ sections:
         publisher: "École Polytechnique Fédérale de Lausanne, Lausanne, Switzerland"
         doi: "10.5075/epfl-thesis-9856"
 
-  - title: "Peer-reviewed conference proceedings"
+  - title: "Peer-Reviewed Conference Proceedings"
     type: "proceedings"
     entries:
       - authors_md: "**Bureš, L.**, & Raffuzzi, V."
@@ -142,7 +142,7 @@ sections:
         title: "Impacts of internal heating on flow and temperature distribution in channels"
         venue: "Proceedings of 21st International Topical Meeting on Nuclear Reactor Thermal Hydraulics (NURETH-21)"
         note_md: "Preprint available at [arXiv:2507.08515](https://arxiv.org/abs/2507.08515)."
-        doi: ""
+        doi: "10.48550/arXiv.2507.08515"
         highlight: false
       - authors_md: "**Bureš, L.**"
         year: 2025
@@ -216,7 +216,7 @@ sections:
         highlight: false
         credit_md: "**CRediT author statement:** Conceptualization, Methodology, Writing – Review & Editing, Supervision."
 
-  - title: "Patents and licences"
+  - title: "Patents and Licences"
     type: "patent"
     entries:
       - authors_md: "**Bureš, L.**"
@@ -232,7 +232,7 @@ sections:
         venue: "Geneva, Switzerland: World Intellectual Property Organization"
         url: "https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2025190786"
 
-  - title: "Contributions to conferences"
+  - title: "Contributions to Conferences"
     type: "contribution"
     entries:
       - authors_md: "**Bureš, L.**"

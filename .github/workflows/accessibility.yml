@@ -10,7 +10,7 @@ jobs:
     env:
       ACCESSIBILITY_SCORE_THRESHOLD: "0.95"
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -19,9 +19,9 @@ jobs:
           bundler-cache: true
 
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: "20"
+          node-version: "24"
 
       - name: Build site
         run: bundle exec jekyll build
@@ -72,7 +72,7 @@ jobs:
           PY
 
       - name: Upload Lighthouse reports
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: lighthouse-accessibility
           path: artifacts/lighthouse

@@ -1,10 +1,12 @@
 ---
 layout: page
 title: Portfolio
+section_nav_data: portfolio
+section_nav_prefix: portfolio
 ---
 
 {% for category in site.data.portfolio %}
-  <section class="cv-section">
+  <section class="cv-section" id="portfolio-{{ category.name | slugify }}">
     <div class="cv-section__header">
       <h2>{{ category.name }}</h2>
       {% if category.tagline %}
