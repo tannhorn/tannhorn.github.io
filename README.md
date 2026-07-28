@@ -59,11 +59,11 @@ This also runs the above Python script under the hood.
 
 Note that GitHub Pages will not run TeX during the build, so `.github/workflows/build-pdfs.yml` handles PDF generation for deployment.
 
-## GitHub Pages constraints
+## GitHub Pages deployment
 
-GitHub Pages builds with a restricted set of supported plugins. This site uses the `github-pages` gem (which includes `jekyll-feed` and `jekyll-seo-tag`) to stay compatible. Avoid adding unsupported plugins or custom build steps to the default Pages build.
+The site is built and deployed by `.github/workflows/deploy-pages.yml`. In the repository's **Settings → Pages**, set the publishing source to **GitHub Actions**. The workflow builds with the locked project dependencies and deploys the generated `_site` directory.
 
-If you update dependencies, keep `github-pages` aligned with the GitHub Pages build environment (the lockfile currently pins `github-pages` 232 / Jekyll 3.10.0).
+The `github-pages` gem keeps local builds aligned with the GitHub Pages Jekyll ecosystem (the lockfile currently pins `github-pages` 232 / Jekyll 3.10.0).
 
 ## Blog feed
 
