@@ -2,7 +2,37 @@ name: Accessibility Audit
 
 on:
   push:
+    paths:
+      - "_config.yml"
+      - "_data/**"
+      - "_includes/**"
+      - "_layouts/**"
+      - "_posts/**"
+      - "assets/**"
+      - "!assets/cv.pdf"
+      - "!assets/publications.pdf"
+      - "blog/**"
+      - "portfolio/**"
+      - "*.md"
+      - "Gemfile"
+      - "Gemfile.lock"
+      - ".github/workflows/accessibility.yml"
   pull_request:
+    paths:
+      - "_config.yml"
+      - "_data/**"
+      - "_includes/**"
+      - "_layouts/**"
+      - "_posts/**"
+      - "assets/**"
+      - "!assets/cv.pdf"
+      - "!assets/publications.pdf"
+      - "blog/**"
+      - "portfolio/**"
+      - "*.md"
+      - "Gemfile"
+      - "Gemfile.lock"
+      - ".github/workflows/accessibility.yml"
 
 jobs:
   lighthouse:
