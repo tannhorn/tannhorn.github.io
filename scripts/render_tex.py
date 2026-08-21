@@ -122,6 +122,7 @@ def build_site_context(root: Path) -> dict:
         "tagline": config.get("tagline", ""),
     }
 
+
 def format_url_display(url: str) -> str:
     display = re.sub(r"^https?://", "", url or "")
     return display.rstrip("/")
@@ -179,7 +180,9 @@ def render_templates(root: Path) -> int:
     )
     env.filters["latex_escape"] = latex_escape
     env.filters["date_range_to_latex"] = date_range_to_latex
-    env.filters["md_to_latex"] = lambda text: md_to_latex(text, pandoc_path, use_pypandoc)
+    env.filters["md_to_latex"] = lambda text: md_to_latex(
+        text, pandoc_path, use_pypandoc
+    )
     env.filters["url_display"] = format_url_display
 
     out_dir = root / "tex" / "out"
@@ -194,7 +197,10 @@ def render_templates(root: Path) -> int:
         "contact_line_secondary": contact_lines["secondary"],
     }
 
-    for name, output in (("cv.tex.j2", out_dir / "cv.tex"), ("publications.tex.j2", out_dir / "publications.tex")):
+    for name, output in (
+        ("cv.tex.j2", out_dir / "cv.tex"),
+        ("publications.tex.j2", out_dir / "publications.tex"),
+    ):
         template = env.get_template(name)
         rendered = template.render(**context)
         output.write_text(rendered, encoding="utf-8")
