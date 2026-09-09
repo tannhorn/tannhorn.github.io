@@ -54,6 +54,13 @@ section_nav_prefix: portfolio
               <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer" aria-label="Visit {{ project.name | escape }} website (opens in new tab)">External site</a>
             </p>
           {% endif %}
+          {% if project.links %}
+            <p class="project-links">
+              {% for link in project.links %}
+                <a href="{% if link.external %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}"{% if link.external %} target="_blank" rel="noopener noreferrer" aria-label="{{ link.label | escape }} for {{ project.name | escape }} (opens in new tab)"{% endif %}>{{ link.label }}</a>{% unless forloop.last %} · {% endunless %}
+              {% endfor %}
+            </p>
+          {% endif %}
         </div>
       {% endfor %}
     </div>

@@ -9,6 +9,18 @@
       summary: "Master and PhD research on phase-change physics and high-fidelity numerical simulation."
       status: "October 2017 to September 2021"
       slug: "direct-numerical-simulation-of-phase-change"
+- name: "Open-source Software"
+  tagline: "Software I develop openly for research, teaching, and technical problem solving."
+  items:
+    - name: "Morana"
+      summary: "Python reference implementation for finite-volume neutron-diffusion calculations on regular hex-z lattices."
+      status: "2026 to present"
+      links:
+        - label: "Documentation"
+          url: "/morana/"
+        - label: "Source code"
+          url: "https://github.com/tannhorn/morana"
+          external: true
 - name: "Independent Work"
   tagline: "As an independent consultant, I have contributed to several projects."
   items:
