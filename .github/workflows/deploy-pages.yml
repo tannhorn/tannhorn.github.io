@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main
+  workflow_run:
+    workflows:
+      - "Build PDFs"
+    types:
+      - completed
   workflow_dispatch:
 
 permissions:
@@ -17,9 +22,18 @@ concurrency:
 
 jobs:
   build:
+    if: >-
+      github.event_name != 'workflow_run' ||
+      (github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'push' &&
+      github.event.workflow_run.head_branch == 'main')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+        with:
+          # Build PDFs can commit updated artifacts during its run, so deploy the
+          # current main tip rather than the SHA that originally started it.
+          ref: ${{ github.event_name == 'workflow_run' && 'main' || github.sha }}
 
       - uses: ruby/setup-ruby@v1
         with:
