@@ -271,3 +271,15 @@ sections:
         year: 2016
         title: "Application of calculation codes based on Monte Carlo method for benchmark experiments (in Czech)"
         description_md: "Poster presentation of bachelor's thesis at *16.\ Mikulášské setkání Mladé generace ČNS*, Brno, Czech Republic. Selected as best bachelor's thesis."
+
+  - title: "Other Research Outputs"
+    type: "research_output"
+    entries:
+      - authors_md: "**Bureš, L.**"
+        year: 2026
+        title: "Morana"
+        version: "0.1.0"
+        publication_type: "Research software"
+        publisher: "Zenodo"
+        doi: "10.5281/zenodo.22681316"
+        highlight: false

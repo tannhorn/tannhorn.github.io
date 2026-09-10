@@ -1,6 +1,7 @@
 {% assign has_meta = false %}
 {% if include.entry.venue and include.entry.venue != "" %}{% assign has_meta = true %}{% endif %}
 {% if include.entry.publication_type and include.entry.publication_type != "" %}{% assign has_meta = true %}{% endif %}
+{% if include.entry.version and include.entry.version != "" %}{% assign has_meta = true %}{% endif %}
 {% if include.entry.patent and include.entry.patent != "" %}{% assign has_meta = true %}{% endif %}
 {% if include.entry.publisher and include.entry.publisher != "" %}{% assign has_meta = true %}{% endif %}
 {% if include.entry.volume and include.entry.volume != "" %}{% assign has_meta = true %}{% endif %}
@@ -11,6 +12,7 @@
   <p class="pub-meta">
     {% if include.entry.venue and include.entry.venue != "" %}<span class="pub-meta-item">{{ include.entry.venue }}</span>{% endif %}
     {% if include.entry.publication_type and include.entry.publication_type != "" %}<span class="pub-meta-item">{{ include.entry.publication_type }}</span>{% endif %}
+    {% if include.entry.version and include.entry.version != "" %}<span class="pub-meta-item">Version {{ include.entry.version }}</span>{% endif %}
     {% if include.entry.patent and include.entry.patent != "" %}<span class="pub-meta-item">{{ include.entry.patent }}</span>{% endif %}
     {% if include.entry.publisher and include.entry.publisher != "" %}<span class="pub-meta-item">{{ include.entry.publisher }}</span>{% endif %}
     {% if include.entry.volume and include.entry.volume != "" %}<span class="pub-meta-item">{{ include.entry.volume }}</span>{% endif %}

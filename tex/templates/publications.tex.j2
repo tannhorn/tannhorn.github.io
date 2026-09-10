@@ -61,6 +61,10 @@
 } ({{ entry.patent | latex_escape }}). {{ entry.venue | latex_escape }}.
 {% elif section.type == "contribution" %}
 {{ entry.authors_md | md_to_latex }} ({{ entry.year }}). {{ entry.title | latex_escape }}.
+{% elif section.type == "research_output" %}
+{{ entry.authors_md | md_to_latex }} ({{ entry.year }}). \textit{
+{{- entry.title | latex_escape -}}
+} (Version {{ entry.version | latex_escape }}) [{{ entry.publication_type | latex_escape }}]. {{ entry.publisher | latex_escape }}.
 {% else %}
 {{ entry.authors_md | md_to_latex }} ({{ entry.year }}). {{ entry.title | latex_escape }}.
 {% endif %}
