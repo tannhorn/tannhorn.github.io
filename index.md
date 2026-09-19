@@ -3,11 +3,13 @@ layout: home
 title: Home
 hero: "Lubomír Bureš"
 about: |
-  I build and validate computational models that help teams make confident engineering decisions. My background is in computational physics and engineering, and I've worked on problems ranging from microscopic physics phenomena to system-level analyses.
+  I help shape the technical direction of molten-salt reactor design at Saltfoss Energy, combining system technical leadership with computational modelling. My work includes establishing modelling approaches, developing and validating new capabilities, and guiding their application to engineering decisions.
 
-  In deep-tech R&D roles, I've taken ideas from early scoping through implementation and validation—both as an individual contributor and as a technical lead. I'm comfortable navigating the wider framing of a problem and choosing the simplest model that still captures the physics that matters.
+  My background spans nuclear engineering and computational physics, from microscopic phase-change phenomena to reactor system dynamics.
 
-  I hold a PhD from the Institute of Physics at EPF Lausanne (EPFL) and a Joint Master's Degree in Nuclear Engineering from ETH Zurich and EPFL. I care about clarity: translating complex results into useful, actionable insights.
+  I take modelling approaches from initial scoping through implementation and validation, then help colleagues take ownership so I can tackle new challenges. Across these transitions, I retain the technical context and reasoning behind earlier choices. I care about choosing the simplest model that captures the physics that matters and translating complex results into useful engineering insights.
+
+  I hold a PhD from the Institute of Physics at EPF Lausanne and a Joint Master's Degree in Nuclear Engineering from ETH Zurich and EPF Lausanne.
 linkedin_url: "https://www.linkedin.com/in/lubomir-bures"
 github_url: "https://github.com/tannhorn"
 scholar_url: "https://scholar.google.com/citations?user=rQRIrc4AAAAJ"

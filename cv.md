@@ -12,7 +12,9 @@ section_nav_prefix: cv
       <h2>{{ section.title }}</h2>
     </div>
     <div class="cv-section__body">
-      {% if section.kind == "skills" %}
+      {% if section.kind == "languages" %}
+        <p class="cv-meta">{{ section.items_list | join: ", " }}</p>
+      {% elsif section.kind == "skills" %}
         {% for category in section.categories %}
           <div class="cv-entry">
             <h3 class="cv-entry__title">{{ category.name }}</h3>

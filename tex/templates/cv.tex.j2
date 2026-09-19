@@ -3,6 +3,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[margin=0.7in]{geometry}
 \usepackage{array}
+\usepackage{tabularx}
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{titlesec}
@@ -35,10 +36,13 @@
 {% for section in cv.sections %}
 \section*{ {{ section.title | latex_escape }} }
 
-{% if section.kind == "skills" %}
-\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.21\textwidth}>{\raggedright\arraybackslash}p{0.81\textwidth}@{}}
+{% if section.kind == "languages" %}
+{{ section.items_list | join(", ") | latex_escape }}
+
+{% elif section.kind == "skills" %}
+\begin{tabularx}{\linewidth}{@{}l@{\hspace{1em}}>{\raggedright\arraybackslash}X@{}}
 {% for category in section.categories %}
-\textbf{ {{ category.name | latex_escape }} } &
+\textbf{ {{- category.name | latex_escape -}}:} &
 {% if category.items_list %}
 {{ category.items_list | join(", ") | latex_escape }}
 {% endif %}
@@ -48,12 +52,13 @@
 {{ item | md_to_latex }}
 {% endfor %}
 {% endif %}
-\\
+\\[0.15em]
 {% endfor %}
-\end{tabular}
+\end{tabularx}
 
 {% elif section.kind == "education" %}
 {% for entry in section.entries %}
+\noindent\begin{minipage}{\linewidth}
 \textbf{ {{ entry.institution | latex_escape }} }\hfill \textit{ {{ entry.location | latex_escape }} }\\
 \textit{ {{ entry.degree | latex_escape }} }\hfill {{ entry.dates | date_range_to_latex | latex_escape }}
 {% if entry.details_md %}
@@ -63,7 +68,10 @@
 {% endfor %}
 \end{itemize}
 {% endif %}
-\vspace{0.35em}
+\end{minipage}\par
+{% if not loop.last %}
+\vspace{0.8em}
+{% endif %}
 {% endfor %}
 
 {% else %}

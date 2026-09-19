@@ -3,24 +3,23 @@ layout: page
 title: "Direct numerical simulation of phase change"
 ---
 
-<p>This page summarises my master and PhD research on phase-change physics, with an emphasis on direct numerical simulation (DNS) and model development. This work was done at the <a href="https://www.psi.ch/en/lsm">Laboratory of Scientific Computing & Modelling of the Paul Scherrer Institute, Switzerland</a>.</p>
+This page summarises my master's and PhD research at the [Laboratory of Scientific Computing & Modelling of the Paul Scherrer Institute, Switzerland](https://www.psi.ch/en/lsm). The work combined numerical-method development, scientific software, and investigation of phase-change physics.
 
-<h2>Focus</h2>
-<p>Investigated fundamental mechanisms in phase-change phenomena, especially nucleate boiling, by developing and applying state-of-the-art DNS software.</p>
+## Focus
 
-<h2>What I did</h2>
-<ul>
-  <li>Designed and implemented novel high-fidelity simulation workflows for phase-change problems.</li>
-  <li>Verified and validated developed computational models.</li>
-  <li>Analyzed the resulting data to understand key drivers.</li>
-  <li>Translated findings into novel physics insights.</li>
-  <li>Collaborated with international partners at several institutions, such as the Massachussetts Institute of Technology and the Kyushu Institute of Technology.</li>
-  <li>Published scientific papers, presented at conferences and workshops, supervised students.</li>
-</ul>
+My research investigated evaporation, condensation, and nucleate boiling through direct numerical simulation, with particular emphasis on the formation and evaporation of the thin liquid microlayer beneath a growing bubble.
 
-<h2>Outcomes</h2>
-<ul>
-  <li>Contributed significantly to the <a href="https://github.com/Niceno/PSI-Boil/">PSI-BOIL</a> DNS software, adding and/or rewriting more than 100'000 lines of its C++ codebase.</li>
-  <li>Obtained foundational results for my master and PhD theses. Awarded the <a href="https://enen.eu/index.php/phd-events/phd-ep-year-2022/">ENEN 2022 PhD prize</a> for my work.</li>
-  <li>Published six peer-reviewed first-author journal papers as well as four peer-reviewed first-author conference papers. Several of the papers have been highly cited with my work contributing both to the state-of-the-art DNS algorithm development and to the understanding of physics of nucleate boiling.</li>
-</ul>
+## Methods and contributions
+
+- Developed geometric volume-of-fluid and sharp-interface phase-change methods and implemented simulation workflows in the C++ PSI-BOIL research code.
+- Verified and validated computational models and analysed simulation results to investigate phase-change mechanisms and microlayer dynamics.
+- Collaborated with international partners, including the Massachusetts Institute of Technology and the Kyushu Institute of Technology.
+- Supervised student research and communicated findings through journal articles, conferences, and workshops.
+
+## Outcomes
+
+Across the combined master's and PhD research period, I added or substantially rewrote more than 100,000 lines of the [PSI-BOIL](https://github.com/Niceno/PSI-Boil/) C++ codebase. My master's and doctoral research led to six first-author peer-reviewed journal papers and four first-author peer-reviewed conference papers.
+
+The work contributed numerical methods and physical insights into nucleate boiling, forming the basis of my master's and doctoral theses. My doctoral work received the [2022 ENEN PhD Prize](https://enen.eu/index.php/phd-events/phd-ep-year-2022/).
+
+See the [publications list]({{ '/publications/' | relative_url }}) for individual research outputs.

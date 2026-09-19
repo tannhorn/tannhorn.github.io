@@ -3,22 +3,18 @@ layout: page
 title: "Physics and modelling of molten-salt reactors"
 ---
 
-This page outlines my ongoing research into molten-salt reactor (MSR) physics and their computational models. This effort forms part of my work at the Danish developer of floating MSR power barges, <a href="https://www.saltfoss.com">Saltfoss Energy (formerly Seaborg Technologies)</a>.
+This page presents selected public research at [Saltfoss Energy (formerly Seaborg Technologies)](https://www.saltfoss.com).
 
-<h2>Focus</h2>
-<p>Build and validate models that capture physics & engineering aspects of MSRs, especially with regard to their dynamics behaviour.</p>
+## Focus
 
-<h2>What I do</h2>
-<ul>
-  <li>Develop, verify and validate computational models for MSR systems.</li>
-  <li>Generate novel insights about MSR dynamics.</li>
-  <li>Develop and maintain MSR physics expertise.</li>
-  <li>Collaborate with partners in Denmark and internationally.</li>
-  <li>Publish scientific papers, present at conferences and workshops, supervise students.</li>
-</ul>
+My research focuses on building foundational understanding of molten-salt reactor physics, particularly system dynamics and heat transfer. These systems exhibit behaviours that differ from those of conventional reactors and receive limited treatment in standard textbooks. Through analytical work and computational modelling, I investigate these behaviours to deepen my physical understanding of these systems and contribute to the wider research literature.
 
-<h2>Outcomes</h2>
-<ul>
-<li>Published four peer-reviewed journal papers as well as eight peer-reviewed conference papers.</li>
-<li>Bolstered company's technical visibility.</li>
-</ul>
+A recurring theme is the importance of treating molten-salt reactors as coupled multiphysics systems. For system-dynamics modelling, this typically means considering neutronics and thermal hydraulics together and extending the model beyond the active core to encompass the full primary loop.
+
+## Selected public research
+
+- Circulating-fuel reactor dynamics, including recirculation effects, frequency response, and linear stability.
+- System modelling of the Molten Salt Reactor Experiment using Modelica/TRANSFORM.
+- Coupled multiphysics benchmark work and analysis of flow distribution and heat transfer.
+
+Alongside this work, I collaborate with research and engineering partners, supervise students, and communicate selected findings through peer-reviewed publications, conferences, and industry forums. The [publications list]({{ '/publications/' | relative_url }}) provides the public research record.
