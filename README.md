@@ -75,3 +75,5 @@ Code (templates, styles, scripts, and configuration) is licensed under the MIT L
 Reserved personal content (CV, portfolio, and related data/assets) is all rights reserved per
 `LICENSE-CONTENT`. Blog posts and associated blog assets are licensed under CC BY-SA 4.0 per
 `LICENSE-CONTENT`. Third-party materials remain under their original licenses and attribution terms.
+Separately maintained project sites published under this domain are subject to the licensing terms
+stated by their respective projects.
