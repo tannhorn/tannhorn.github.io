@@ -57,6 +57,23 @@ scripts/build_pdf.sh
 
 This also runs the above Python script under the hood.
 
+The PDF templates omit build timestamps and automatic document IDs to keep
+output reproducible with the same sources and toolchain. The PDF workflow uses
+Ubuntu 24.04 LTS and Python 3.12.3. Python dependencies are pinned in
+`requirements.txt`; TeX, Pandoc, and font packages are pinned in
+`tex/ubuntu-24.04-packages.txt`. On Ubuntu 24.04, install them with:
+
+```bash
+sudo apt-get update
+mapfile -t pdf_packages < tex/ubuntu-24.04-packages.txt
+sudo apt-get install -y --no-install-recommends "${pdf_packages[@]}"
+```
+
+These pins cover the PDF toolchain, not every transitive system dependency or
+the complete runner image. If an archive stops providing a pinned version,
+installation fails rather than silently upgrading. When updating pins, rebuild
+and visually check the PDFs before committing the new versions and outputs.
+
 Note that GitHub Pages will not run TeX during the build, so `.github/workflows/build-pdfs.yml` handles PDF generation for deployment.
 
 ## GitHub Pages deployment

@@ -278,8 +278,7 @@ sections:
       - authors_md: "**Bureš, L.**"
         year: 2026
         title: "Morana"
-        version: "0.1.0"
         publication_type: "Research software"
         publisher: "Zenodo"
-        doi: "10.5281/zenodo.22681316"
+        doi: "10.5281/zenodo.22681315"
         highlight: false

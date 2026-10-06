@@ -1,4 +1,7 @@
 \documentclass[10pt]{article}
+% Omit volatile metadata so identical inputs produce identical PDFs.
+\pdfinfoomitdate=1
+\pdftrailerid{}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[margin=0.75in]{geometry}
@@ -64,7 +67,7 @@
 {% elif section.type == "research_output" %}
 {{ entry.authors_md | md_to_latex }} ({{ entry.year }}). \textit{
 {{- entry.title | latex_escape -}}
-} (Version {{ entry.version | latex_escape }}) [{{ entry.publication_type | latex_escape }}]. {{ entry.publisher | latex_escape }}.
+}{% if entry.version %} (Version {{ entry.version | latex_escape }}){% endif %} [{{ entry.publication_type | latex_escape }}]. {{ entry.publisher | latex_escape }}.
 {% else %}
 {{ entry.authors_md | md_to_latex }} ({{ entry.year }}). {{ entry.title | latex_escape }}.
 {% endif %}

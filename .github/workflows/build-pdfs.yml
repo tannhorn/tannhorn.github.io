@@ -9,6 +9,7 @@ on:
       - "_data/**"
       - "tex/**"
       - "scripts/**"
+      - "requirements.txt"
       - "assets/**"
       - "!assets/cv.pdf"
       - "!assets/publications.pdf"
@@ -21,6 +22,7 @@ on:
       - "_data/**"
       - "tex/**"
       - "scripts/**"
+      - "requirements.txt"
       - "assets/**"
       - "!assets/cv.pdf"
       - "!assets/publications.pdf"
@@ -34,7 +36,7 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -42,25 +44,17 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
-          python-version: "3.11"
+          python-version: "3.12.3"
 
       - name: Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y \
-            latexmk \
-            pandoc \
-            texlive-fonts-extra \
-            texlive-fonts-recommended \
-            texlive-lang-european \
-            texlive-latex-extra \
-            texlive-latex-recommended \
-            texlive-pictures
+          mapfile -t pdf_packages < tex/ubuntu-24.04-packages.txt
+          sudo apt-get install -y --no-install-recommends "${pdf_packages[@]}"
 
       - name: Install Python dependencies
         run: |
-          python3 -m pip install --upgrade pip
-          python3 -m pip install pyyaml jinja2 pypandoc
+          python3 -m pip install -r requirements.txt
 
       - name: Build PDFs
         run: scripts/build_pdf.sh
