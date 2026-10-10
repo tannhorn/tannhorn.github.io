@@ -59,13 +59,13 @@ This also runs the above Python script under the hood.
 
 The PDF templates omit build timestamps and automatic document IDs to keep
 output reproducible with the same sources and toolchain. The PDF workflow uses
-Ubuntu 24.04 LTS and Python 3.12.3. Python dependencies are pinned in
+Ubuntu 26.04 LTS and Python 3.14.4. Python dependencies are pinned in
 `requirements.txt`; TeX, Pandoc, and font packages are pinned in
-`tex/ubuntu-24.04-packages.txt`. On Ubuntu 24.04, install them with:
+`tex/ubuntu-26.04-packages.txt`. On Ubuntu 26.04, install them with:
 
 ```bash
 sudo apt-get update
-mapfile -t pdf_packages < tex/ubuntu-24.04-packages.txt
+mapfile -t pdf_packages < tex/ubuntu-26.04-packages.txt
 sudo apt-get install -y --no-install-recommends "${pdf_packages[@]}"
 ```
 

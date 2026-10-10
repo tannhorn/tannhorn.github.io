@@ -1,0 +1,16 @@
+latexmk=1:4.87~ds-1
+pandoc=3.7.0.2+ds-1
+texlive-base=2025.20260124-1
+texlive-binaries=2025.20250727.75242+ds-5build1
+texlive-fonts-extra=2025.20260124-1
+texlive-fonts-extra-links=2025.20260124-1
+texlive-fonts-recommended=2025.20260124-1
+texlive-lang-european=2025.20260124-1
+texlive-latex-base=2025.20260124-1
+texlive-latex-extra=2025.20260124-1
+texlive-latex-recommended=2025.20260124-1
+texlive-pictures=2025.20260124-1
+cm-super=0.3.4-17build1
+cm-super-minimal=0.3.4-17build1
+fonts-lmodern=2.005-1build1
+lmodern=2.005-1build1
