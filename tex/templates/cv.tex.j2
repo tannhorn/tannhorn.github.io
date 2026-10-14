@@ -62,8 +62,8 @@
 {% elif section.kind == "education" %}
 {% for entry in section.entries %}
 \noindent\begin{minipage}{\linewidth}
-\textbf{ {{ entry.institution | latex_escape }} }\hfill \textit{ {{ entry.location | latex_escape }} }\\
-\textit{ {{ entry.degree | latex_escape }} }\hfill {{ entry.dates | date_range_to_latex | latex_escape }}
+\textbf{ {{- entry.institution | latex_escape -}} }\hfill \textit{ {{- entry.location | latex_escape -}} }\\
+\textit{ {{- entry.degree | latex_escape -}} }\hfill {{ entry.dates | date_range_to_latex | latex_escape }}
 {% if entry.details_md %}
 \begin{itemize}
 {% for item in entry.details_md %}
@@ -79,9 +79,9 @@
 
 {% else %}
 {% for entry in section.entries %}
-\textbf{ {{ entry.org | latex_escape }} }\hfill \textit{ {{ entry.location | latex_escape }} }\\
+\textbf{ {{- entry.org | latex_escape -}} }\hfill \textit{ {{- entry.location | latex_escape -}} }\\
 {% for role in entry.roles %}
-\textit{ {{ role.title | latex_escape }} }\hfill {{ role.dates | date_range_to_latex | latex_escape }}\\
+\textit{ {{- role.title | latex_escape -}} }\hfill {{ role.dates | date_range_to_latex | latex_escape }}\\
 {% if role.highlights_md %}
 \begin{itemize}
 {% for item in role.highlights_md %}
@@ -90,6 +90,11 @@
 \end{itemize}
 {% endif %}
 {% endfor %}
+{% if entry.shared_summary_md %}
+\vspace{0.25em}
+\noindent {{ entry.shared_summary_md | md_to_latex }}\par
+\vspace{0.5em}
+{% endif %}
 \vspace{0.35em}
 {% endfor %}
 {% endif %}

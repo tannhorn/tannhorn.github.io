@@ -11,16 +11,18 @@ sections:
           - title: "Senior Multiphysics Specialist"
             dates: "March 2024 to present"
             highlights_md:
-              - "Serve as a system technical lead within molten-salt reactor development, guiding design work for the system and coordinating with other system leads."
+              - "Serve as a system technical lead within molten-salt reactor development, guiding design work for the system and coordinating with other technical leads."
               - "Establish modelling approaches and develop tools for engineering analysis, then support colleagues in taking ownership while remaining available for technical review and guidance."
               - "Combine engineering leadership with hands-on modelling and analysis across reactor physics and thermal hydraulics, including development with the MOOSE Framework."
-              - "Publish selected research and present technical developments at scientific conferences and industry forums."
           - title: "Multiphysics Specialist"
             dates: "October 2021 to March 2024"
             highlights_md:
               - "Developed and applied Python and Modelica models for molten-salt reactor physics, thermal hydraulics, and system dynamics."
-              - "Supervised a master's thesis project whose candidate subsequently joined the company as a full-time employee."
-              - "Published peer-reviewed research and represented the company both in Denmark and internationally."
+        shared_summary_md: >-
+          Responsibilities across both roles include publishing peer-reviewed research
+          and representing the company at scientific conferences and industry forums
+          in Denmark and internationally. Supervised two master's research projects;
+          both students subsequently accepted positions at the company.
       - org: "Paul Scherrer Institute"
         location: "Villigen, Switzerland"
         roles:

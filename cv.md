@@ -66,6 +66,11 @@ section_nav_prefix: cv
                 {% endif %}
               </div>
             {% endfor %}
+            {% if entry.shared_summary_md %}
+              <div class="cv-entry__summary">
+                {{ entry.shared_summary_md | markdownify }}
+              </div>
+            {% endif %}
           </div>
         {% endfor %}
       {% endif %}

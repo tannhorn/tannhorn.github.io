@@ -275,6 +275,14 @@ sections:
   - title: "Other Research Outputs"
     type: "research_output"
     entries:
+      - authors_md: "Sclauzero, T., & **Bureš, L.**"
+        year: 2026
+        title: "Generic FUNaK-fuelled thermal molten salt reactor (GFMR): Reference specification"
+        publication_type: "Dataset"
+        publisher: "Zenodo"
+        doi: "10.5281/zenodo.23348199"
+        credit_md: "**CRediT author statement:** Conceptualization, Methodology, Validation, Data Curation, Writing – Review & Editing, Supervision."
+        highlight: false
       - authors_md: "**Bureš, L.**"
         year: 2026
         title: "Morana"

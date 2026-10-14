@@ -11,10 +11,12 @@ My research focuses on building foundational understanding of molten-salt reacto
 
 A recurring theme is the importance of treating molten-salt reactors as coupled multiphysics systems. For system-dynamics modelling, this typically means considering neutronics and thermal hydraulics together and extending the model beyond the active core to encompass the full primary loop.
 
-## Selected public research
+## Research contributions
 
 - Circulating-fuel reactor dynamics, including recirculation effects, frequency response, and linear stability.
 - System modelling of the Molten Salt Reactor Experiment using Modelica/TRANSFORM.
 - Coupled multiphysics benchmark work and analysis of flow distribution and heat transfer.
 
-Alongside this work, I collaborate with research and engineering partners, supervise students, and communicate selected findings through peer-reviewed publications, conferences, and industry forums. The [publications list]({{ '/publications/' | relative_url }}) provides the public research record.
+I also supervised the master's project in which the [GFMR reference specification](https://saltfossenergy.github.io/GFMR/) was developed. The openly published specification provides a generic molten-salt reactor reference problem intended for modelling, benchmarking, and education.
+
+Alongside this work, I collaborate with research and engineering partners and communicate selected findings through peer-reviewed publications, conferences, and industry forums. The [publications list]({{ '/publications/' | relative_url }}) provides the public research record.

@@ -351,6 +351,14 @@ a:focus-visible {
   font-weight: 600;
 }
 
+.cv-entry__summary {
+  margin-top: 20px;
+}
+
+.cv-entry__summary p {
+  margin: 0;
+}
+
 .pub-entry {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
